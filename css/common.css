@@ -1,0 +1,152 @@
+/*-------------------------------------------------Global CSS---------------------------------------------*/
+
+body,html{
+  padding:0;
+  margin:0;
+  overflow-x:hidden;
+}
+
+.custom-col-10{
+  padding-left:10px !important;
+  padding-right:10px !important;
+}
+
+.custom-col-7{
+  padding-left:7.5px !important;
+  padding-right:7.5px !important;
+}
+
+.custom-col-5{
+  padding-left:5px !important;
+  padding-right:5px !important;
+}
+
+.no-pad{
+  padding:0 !important;
+}
+
+.no-pad-rgt{
+  padding-right:0 !important;
+}
+
+.no-pad-lft{
+  padding-left:0 !important;
+}
+
+
+.row-eq-height{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+
+/*-----------------------------------------------Cross Browser CSS--------------------------*/
+
+/*-----------------------------------IE Browsers----------------------------*/
+
+@media screen and (min-width:320px), screen\0 {
+
+}
+
+
+/*--------------------------------------Safari Browsers----------------------------*/
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    ::i-block-chrome, .someClass {
+
+    }
+}
+
+
+/*---------------------------------------FireFox Browsers---------------------------------*/
+
+@supports (-moz-appearance:none) and (display:contents) {
+    .selector { property:value; }
+}
+
+/*---------------------------------------------------Media Queries------------------------------*/
+
+
+@media (min-width: 320px) and (max-width:991px)	{
+  .row-eq-height{
+    display:block;
+  }
+  .mobile-pad{
+    padding:0;
+  }
+
+}
+
+@media (max-width: 990px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in {
+        display: block !important;
+    }
+}
+
+@media(min-width:480px){
+
+}
+
+@media(min-width:600px){
+
+}
+@media(min-width:768px){
+
+}
+
+@media(min-width:992px){
+
+}
+
+@media(min-width:1200px){
+
+}
+
+@media(min-width:1320px){
+
+}
+
+@media(min-width:1400px){
+
+}
+@media(min-width:1550px){
+
+}
+
+@media(min-width:1900px){
+
+}
