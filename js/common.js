@@ -5,7 +5,10 @@ $(document).ready(function(){
   var h = $(window).height();
 
 
+  /*----------------------------OWL -Carousel--------------------------------*/
+
   $('.owl-carousel').owlCarousel({
+
     margin: 10,
     responsive: {
       0: {
@@ -27,6 +30,7 @@ $(document).ready(function(){
     navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
     touchDrag  : true,
     mouseDrag  : false
+
   });
   
 });
@@ -37,8 +41,8 @@ $(window).resize(function(){
   var w = $(window).width();
   var h = $(window).height();
 
-  
-  
+
+
 });
 
 
@@ -46,7 +50,7 @@ $(window).resize(function(){
 /*----------------------------------------------------Window Load Function---------------------------------------------*/
 
 $(window).load(function() {
-	
+
 });
 
 
@@ -54,7 +58,7 @@ $(window).load(function() {
 /*----------------------------------------------------Window Scroll Function---------------------------------------------*/
 
 $(window).scroll(function(){
-	
+
 });
 
 
@@ -62,8 +66,3 @@ $(window).scroll(function(){
 /*-------------------------------------Common JS--------------------------------------*/
 var w = $(window).width();
 var h = $(window).height();
-
-
-  
- 
- 
