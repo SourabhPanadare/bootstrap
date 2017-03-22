@@ -90,12 +90,27 @@ body,html{
     .collapse.in {
         display: block !important;
     }
-	
+
 	.row-eq-height{
 		display:block;
 	}
 }
 
+@media(min-width:768px){
+
+}
+
+@media(min-width:992px){
+
+}
+
+@media(min-width:1200px){
+
+}
+
+@media(max-width:991px) and (orientation:landscape){
+
+}
 
 
 /*-----------------------------------------------Cross Browser CSS--------------------------*/
@@ -119,8 +134,7 @@ body,html{
 /*---------------------------------------FireFox Browsers---------------------------------*/
 
 @supports (-moz-appearance:none) and (display:contents) {
-    .someClass { 
+    .someClass {
 
 	}
 }
-

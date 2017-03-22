@@ -1,0 +1,52 @@
+/*------------------------------Owl Carousel----------------------------------*/
+<div class="owl-carousel owl-theme">
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+</div>
+
+
+$('.owl-carousel').owlCarousel({
+  responsiveClass:true,
+  responsive: {
+    0: {
+      items: 1,
+      touchDrag: true
+    },
+    768: {
+      items: 2,
+      touchDrag: true
+    },
+    992: {
+      items: 3,
+      touchDrag: true
+    },
+    1200: {
+      items: 3
+    }
+  },
+  margin: 10,
+  center: true,
+  autoWidth:true,
+  autoHeight:true,
+  stagePadding: 50,
+  lazyLoad:true,
+  video:true,
+  animateOut: 'fadeOut',
+  animateIn: 'fadeIn',
+  autoplay:true,
+  autoplayTimeout:1000,
+  loop: true,
+  dots: false,
+  touchDrag: false,
+  mouseDrag: false,
+  nav: true,
+  navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
+});
+
+
+/*--------------------------------------------------Ajax Reading-----------------------------------*/
