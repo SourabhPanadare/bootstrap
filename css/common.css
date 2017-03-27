@@ -117,10 +117,9 @@ body,html{
 
 /*-----------------------------------IE Browsers----------------------------*/
 
-@media screen and (min-width:320px), screen\0 {
-
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  
 }
-
 
 /*--------------------------------------Safari Browsers----------------------------*/
 
