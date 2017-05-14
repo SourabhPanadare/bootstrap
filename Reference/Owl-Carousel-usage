@@ -1,0 +1,65 @@
+/*-------------------------------------------HTML---------------------------------*/
+
+<div class="owl-carousel owl-theme">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"</div>
+</div>
+
+
+/*---------------------------------------Script------------------------------------*/
+$('.owl-carousel').owlCarousel({
+    margin:10,
+    stagePadding: 50,
+    responsive:{
+        0:{
+            items:1
+        },
+        768:{
+            items:2
+        },
+        992:{
+            items:3,
+            touchDrag:false
+        }
+    },
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    loop:true,
+    mouseDrag:false,
+    touchDrag:true,
+    nav:true,
+    navText: ["<i class='fa fa-chevron-left' aria-hidden='true'></i>","<i class='fa fa-chevron-right' aria-hidden='true'></i>"]
+})
+
+
+/*----------------------------------------Events-----------------------------------*/
+
+var owl = $('.owl-carousel');
+owl.owlCarousel();
+
+// Go to the next item
+$('.customNextBtn').click(function() {
+    owl.trigger('next.owl.carousel');
+})
+
+// Go to the previous item
+$('.customPrevBtn').click(function() {
+    owl.trigger('prev.owl.carousel', [300]);
+})
+
+
+
+var owl = $('.owl-carousel');
+owl.owlCarousel();
+
+owl.on('changed.owl.carousel', function(event) {
+
+})
+
+initialize.owl.carousel, initialized.owl.carousel, resize.owl.carousel, resized.owl.carousel, refresh.owl.carousel, refreshed.owl.carousel,
+drag.owl.carousel, dragged.owl.carousel, translate.owl.carousel, translated.owl.carousel, change.owl.carousel, changed.owl.carousel,
+next.owl.carousel, prev.owl.carousel, to.owl.carousel, destroy.owl.carousel, replace.owl.carousel, add.owl.carousel, remove.owl.carousel, play.owl.autoplay, stop.owl.autoplay
