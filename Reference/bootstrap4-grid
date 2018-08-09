@@ -1,0 +1,121 @@
+## Responsive Breakpoints
+
+	@media (min-width: 576px) { ... }		@media (max-width: 575.98px) { ... }
+	@media (min-width: 768px) { ... }		@media (max-width: 767.98px) { ... }
+	@media (min-width: 992px) { ... }		@media (max-width: 991.98px) { ... }
+	@media (min-width: 1200px) { ... }		@media (max-width: 1199.98px) { ... }
+
+	@media (max-width: 575.98px) { ... }
+	@media (min-width: 576px) and (max-width: 767.98px) { ... }
+	@media (min-width: 768px) and (max-width: 991.98px) { ... }
+	@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+	@media (min-width: 1200px) { ... }	
+	
+
+## Grid Options
+
+	Extra small     <576px		.col-
+	Small           ≥576px		.col-sm-
+	Medium          ≥768px		.col-md-
+	Large 			≥992px		.col-lg-
+	Extra large 	≥1200px		.col-xl-
+
+## Auto-layout columns
+
+	Equal-Width:-  .col  
+	<div class="row">
+		<div class="col"></div>
+		<div class="col"></div>
+	</div>
+
+    One Column Width:- .col-6        
+    <div class="row">
+    	<div class="col"></div>
+    	<div class="col-6"></div>
+    	<div class="col"></div>
+    </div>	
+
+	Variable width content:- .col-md-auto  
+	<div class="row">
+		<div class="col"></div>
+		<div class="col-md-auto"></div>
+		<div class="col"></div>
+	</div>
+
+    Equal-width multi-row:-  w-100
+    <div class="row">
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="w-100"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+	</div>
+
+
+## Alignment
+
+	Row Alignment:-(Top To Bottom)(Row)
+
+	  Top:-      .align-items-start
+	  <div class="row align-items-start"></div>
+
+	  Center:-   .align-items-center
+	  <div class="row align-items-center"></div>
+
+	  Bottom:- 	 .align-items-end
+	  <div class="row align-items-end"></div>
+
+	Column Alignment:-(Left To Right)(Column)
+
+	  Left:- 	 .align-self-start
+	  <div class="col align-self-start"></div>
+
+	  Center:-   .align-self-center
+	  <div class="col align-self-center"></div>
+
+	  Right:- 	 .align-self-end
+	  <div class="col align-self-end"></div>
+
+	Row And Column Alignment:-(TopLeft, CenterCenter, BottomRight)(Row)
+
+	  TopLeft:-   .justify-content-start   
+	  <div class="row justify-content-start"></div>
+
+	  CenterCenter:- .justify-content-center
+	  <div class="row justify-content-center"></div>
+
+	  BottomRight:- .justify-content-end
+	  <div class="row justify-content-end"></div>
+
+	Special Case:- (Space Between Two Columns)
+
+	  col space col:- .justify-content-between
+
+## No gutters  
+
+	.no-gutters (No 15px margin at Start and End )
+
+	 <div class="row no-gutters"></div>
+
+## Offsetting columns 
+ 	
+	.offset-md-3 
+
+	<div class="row">
+	  <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+	  <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+	</div>
+
+## Margin utilities
+
+	Float Left:- .mr-auto
+
+	<div class="row">
+		<div class="col-md-4 mr-auto"></div>
+	</div>
+
+	Float Right:- .ml-auto
+
+	<div class="row">
+		<div class="col-md-4 ml-auto"></div>
+	</div>
