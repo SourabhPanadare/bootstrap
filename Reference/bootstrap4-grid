@@ -119,3 +119,66 @@
 	<div class="row">
 		<div class="col-md-4 ml-auto"></div>
 	</div>
+
+## Media Object
+
+	Left Aligned:- (Image At Left)
+
+	<div class="media">
+	  <img class="mr-3" src="..." alt="Generic placeholder image">
+	  <div class="media-body">
+	
+	  </div>
+	</div>
+
+	Right Aligned:- (Image At Right)
+
+	<div class="media">
+	  <div class="media-body">
+	   
+	  </div>
+	  <img class="ml-3" src="..." alt="Generic placeholder image">
+	</div>
+
+## Media Alignment
+
+   Top Alignment:- .align-self-start
+
+   	<div class="media">
+	  <img class="align-self-start mr-3" src="..." alt="Generic placeholder image">
+	  <div class="media-body">
+	  
+	  </div>
+	</div>
+
+	Center Alignment:- .align-self-center
+
+	<div class="media">
+	  <img class="align-self-center mr-3" src="..." alt="Generic placeholder image">
+	  <div class="media-body">
+	   
+	  </div>
+	</div>
+
+	Bottom Alignment:- .align-self-end
+
+	<div class="media">
+	  <img class="align-self-end mr-3" src="..." alt="Generic placeholder image">
+	  <div class="media-body">
+
+	  </div>
+	</div>
+
+## Media List
+
+	<ul class="list-unstyled">
+		<li class="media">
+    
+  		</li>
+  		<li class="media my-4">
+    
+  		</li>
+  		<li class="media">
+   
+  		</li>
+	</ul>

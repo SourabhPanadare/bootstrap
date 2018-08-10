@@ -1,0 +1,111 @@
+## Typography
+
+	Muted Text(Grey Color Text):- .text-muted
+	<small class="text-muted">With faded secondary text</small>
+
+	Leading Text(Major Text):- .lead
+	<p class="lead"></p>
+
+	Highlighted Text:- <mark></mark>
+
+	Deleted Text:- <del></del>
+
+	Underline Text:- <u></u>
+
+	Small Text:- <small></small>
+
+	Strong Text:- <strong></strong>
+
+	Italic Text:- <em></em>
+
+## Blockquotes(Quated Text used in carousel with dashed subtext)
+
+	Left Aligned Text:- 
+	<blockquote class="blockquote">
+	  <p class="mb-0"></p>
+	  <footer class="blockquote-footer"></footer>
+	</blockquote>
+
+	Center Aligned Text:- .text-center
+	<blockquote class="blockquote text-center">
+	  <p class="mb-0"></p>
+	  <footer class="blockquote-footer"></footer>
+	</blockquote>
+
+	Right Aligned Text:- .text-right
+	<blockquote class="blockquote text-right">
+	  <p class="mb-0"></p>
+	  <footer class="blockquote-footer"></footer>
+	</blockquote>
+
+## Lists(ul li)
+
+	Unstyled:- .list-unstyled  (text above & below)
+	<ul class="list-unstyled">
+		<li></li>
+	</ul>
+
+	Inline:- .list-inline (text beside each other)
+	<ul class="list-inline">
+	  <li class="list-inline-item"></li>
+	  <li class="list-inline-item"></li>
+	  <li class="list-inline-item"></li>
+	</ul>
+
+	Description list:- (Bold Text at left and related para on right side)
+
+	<dl class="row">
+		<dt class="col-sm-3"></dt>
+  		<dd class="col-sm-9"></dd>
+	</dl>
+
+## Images
+
+   Thumbnail:- .img-thumbnail (provides border along the image)
+   <img src="..." alt="..." class="img-thumbnail">
+
+   Rounded:- .rounded (gives default border-radius)
+   Centered:- .mx-auto
+   <img src="..." class="rounded mx-auto d-block" alt="...">
+
+## Picture:-  (For Multiple img src)
+
+   <picture>
+  	<source srcset="..." type="image/svg+xml">
+  	<img src="..." class="img-fluid img-thumbnail" alt="...">
+   </picture>
+
+## Figures:- (Image with caption)
+
+	<figure class="figure">
+	  <img src="..." class="figure-img img-fluid rounded">
+	  <figcaption class="figure-caption"></figcaption>
+	</figure>
+
+## Table
+
+	<table class="table">
+		<thead>
+	    	<tr>
+	    	  <th scope="col">#</th>
+		      <th scope="col">First</th>
+	    	</tr>
+	    </thead>
+	    <tbody>
+		    <tr>
+		      <th scope="row">1</th>
+		      <td>Mark</td>
+		    </tr>
+	    </tbody>
+	</table>
+
+## Table Behavoir
+
+	Dark Theme:- .table-dark
+	Stripped Table:- .table-striped
+	Bordered Table:- .table-bordered
+	Hoverable rows:- .table-hover
+	Responsive Table:- .table-responsive
+
+
+Note:- .table-responsive-sm, .table-responsive-md, .table-responsive-lg, .table-responsive-xl
