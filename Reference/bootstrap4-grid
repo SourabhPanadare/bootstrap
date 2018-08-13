@@ -42,7 +42,7 @@
 		<div class="col"></div>
 	</div>
 
-    Equal-width multi-row:-  w-100
+    Equal-width multi-row:-  .w-100
     <div class="row">
 		<div class="col"></div>
 		<div class="col"></div>

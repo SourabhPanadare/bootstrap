@@ -40,3 +40,75 @@ Note:- It provide space between two Divs
 	.text-muted, .text-white-50, .text-black-50
 
 ## Display
+
+   hide:- .d-none(.hidden)   inline:- .d-inline         		flex:- .d-flex
+   block:- .d-block			 inline-block:- .d-inline-block		inline-flex:- .d-inline-flex
+
+## Embed
+
+   Ratio 21:9 :- .embed-responsive-21by9
+   <div class="embed-responsive embed-responsive-21by9">
+	  <iframe class="embed-responsive-item" src="..."></iframe>
+   </div>
+
+   Ratio 16:9 :- .embed-responsive-16by9
+   <div class="embed-responsive embed-responsive-16by9">
+	  <iframe class="embed-responsive-item" src="..."></iframe>
+   </div>
+
+   Ratio 4:3 :- .embed-responsive-4by3
+   <div class="embed-responsive embed-responsive-4by3">
+	  <iframe class="embed-responsive-item" src="..."></iframe>
+   </div>
+
+   Ratio 1:1 :- .embed-responsive-1by1
+   <div class="embed-responsive embed-responsive-1by1">
+	  <iframe class="embed-responsive-item" src="..."></iframe>
+   </div>
+
+## Float
+
+    Left:- .float-left
+    Right:- .float-right
+    None:- .float-none
+
+## Image Replacement (Replace Text With Background Image)
+
+   .text-hide:-
+   <h1 class="text-hide" style="background-image: url('/docs/4.0/assets/brand/bootstrap-solid.svg'); width: 50px; height: 50px;">Bootstrap</h1>
+
+## Position
+
+   relative:- .position-relative   
+   absolute:- .position-absolute
+   fixed:-    .position-fixed
+
+   sticky:-   .position-sticky (div sticks when scrolling)
+   static:-   .position-static (not compulsary)
+
+   Top        Bottom       
+   fixed-top  fixed-bottom   
+   sticky-top
+
+## Sizing (Height & Width)(In Percentage)
+   
+   Width:- .w-
+   .w-25, .w-50, .w-75, .w-100
+   Height:- .h-
+   .h-25, .h-50, .h-75., .h-100
+   Max-Width:- .mw-
+   .mw-25, .mw-50, .mw-75, .mw-100
+   MAx Height:- .mh-
+   .mh-25, .mh-50, .mh-75, .mh-100
+
+
+## Spacing (margin and padding)
+
+   margin:- .m-, .mt-, .mr-, .mb-, .ml-, .mx-, .my-
+   .m-0, .m-2, .mt-4, .mr-2
+
+   padding:- .p-, .pt-, .pr-, .pb-, .pl-
+   .p-0, .p-2, .pt-2, .pb-4
+
+
+
