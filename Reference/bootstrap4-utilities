@@ -105,10 +105,39 @@ Note:- It provide space between two Divs
 ## Spacing (margin and padding)
 
    margin:- .m-, .mt-, .mr-, .mb-, .ml-, .mx-, .my-
-   .m-0, .m-2, .mt-4, .mr-2
+   .m-0, .m-2, .mt-4, .mr-2, .mx-auto, .my-auto
 
    padding:- .p-, .pt-, .pr-, .pb-, .pl-
    .p-0, .p-2, .pt-2, .pb-4
+
+
+## Text
+
+   Text-Alignment:- .text-
+   .text-justify, .text-left, .text-right, .text-center
+
+   Text Wrapping:- .text- (.. in front of text)
+   .text-nowrap, .text-truncate
+
+   Text Transform:- .text- 
+   .text-lowercase, .text-uppercase, .text-capitalize
+
+## Font
+
+   Font-Weight:- .font-weight-
+   .font-weight-bold, .font-weight-normal, .font-weight-light
+
+   Font-italic:- .font-italic
+
+## Visibility
+
+   Visible:- .visible
+   Hidden:- .invisible
+
+## Vertical Alignment (Aligning Text superscript subscript type)
+
+   .align-baseline, .align-top, .align-middle, .align-bottom, .align-text-bottom, .align-text-top
+
 
 
 
