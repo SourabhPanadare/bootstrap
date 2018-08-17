@@ -87,7 +87,7 @@
 	  BottomRight:- .justify-content-end
 	  <div class="row justify-content-end"></div>
 
-	Special Case:- (Space Between Two Columns)
+	  Special Case:- (Space Between Two Columns)
 
 	  col space col:- .justify-content-between
 
