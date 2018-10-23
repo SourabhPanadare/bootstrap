@@ -92,9 +92,12 @@
                      .text-hide
 		     
         Div Of Equal Height:-
-	            <div class="row equal">
-		    	<div class="col-4"></div>
-			<div class="col-8"></div>
-		    </div>
+	    <div class="row equal">
+		<div class="col-4"></div>
+		<div class="col-8"></div>
+	    </div>
     
-
+       Centrally Aligned Div:-
+            <div class="jumbotron text-center">
+	    	<div class="container"></div>
+	    </div>
