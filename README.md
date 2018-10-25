@@ -84,14 +84,7 @@
 
 #  Misc
 
-	Clearfix:-       .clearfix
-	Close Button:-   .close
-	Embed:-          .embed-responsive-21by9, .embed-responsive-16by9,      								 .embed-responsive-4by3,  .embed-responsive-1by1   
-
-        Text With Image Replacement:- 
-                     .text-hide
-		     
-        Div Of Equal Height:-
+	Div Of Equal Height:-
 	    <div class="row equal">
 		<div class="col-4"></div>
 		<div class="col-8"></div>
@@ -101,3 +94,17 @@
             <div class="jumbotron text-center">
 	    	<div class="container"></div>
 	    </div>
+       
+       Inline List:-
+           <ul class="list-inline">
+	   	<li class="list-inline-item"></li>
+	   </ul>
+
+	Clearfix:-       .clearfix
+	Close Button:-   .close
+	Embed:-          .embed-responsive-21by9, .embed-responsive-16by9,      								 .embed-responsive-4by3,  .embed-responsive-1by1   
+
+        Text With Image Replacement:- 
+                     .text-hide
+		     
+        
