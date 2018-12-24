@@ -1,0 +1,54 @@
+# SVG:- Scalable Vector Graphics
+
+  <svg width="300" height="200">
+        <text x="10" y="20" style="font-size:14px;">
+           Your browser support SVG.
+        </text>
+  </svg>
+
+  ## Drawing Line
+
+  <svg width="300" height="200">
+    <line x1="50" y1="50" x2="250" y2="150" style="stroke:red; stroke-width:3;" />
+  </svg>
+
+  ## Drawing a Rectangle
+
+  <svg width="300" height="200">
+    <rect x="50" y="50" width="200" height="100" style="fill:orange; stroke:black; stroke-width:3;" />
+  </svg>
+
+  ## Drawing Circle
+
+  <svg width="300" height="200">
+    <circle cx="150" cy="100" r="70" style="fill:lime; stroke:black; stroke-width:3;" />
+  </svg>
+
+  ## Drawing Text with SVG
+
+  <svg width="300" height="200">
+    <text x="20" y="30" style="fill:purple; font-size:22px;">
+        Welcome to Our Website!
+    </text>
+    <text x="20" y="30" dx="0" dy="20" style="fill:navy; font-size:14px;">
+        Here you will find lots of useful information.
+    </text>
+  </svg>
+
+# Audio And Video
+
+  <audio controls="controls">
+    <source src="birds.mp3" type="audio/mpeg">
+    <source src="birds.ogg" type="audio/ogg">
+    Your browser does not support the HTML5 Audio element.
+  </audio>
+
+  <video controls="controls">
+    <source src="birds.mp4" type="video/mp4">
+    <source src="birds.ogv" type="video/ogg">
+    Your browser does not support the HTML5 Audio element.
+  </video>
+
+  <object data="sea.mp3/shuttle.mp4" width="200px" height="50px"></object>
+
+  <embed src="wind.mp3/shuttle.ogv" width="200px" height="50px">

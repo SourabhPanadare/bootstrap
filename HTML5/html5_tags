@@ -1,0 +1,80 @@
+# Structural Tags
+
+<article>:- Represents a section of content that forms an independent part of a documents.(blog,socialmedia)
+
+<aside>:- Represents a section of the web page that encloses content which is tangentially related to the content around it.
+
+<details>:- Represents a control from which the user can obtain additional information on-demand.
+
+<summary>:- Represents a title for the <details> element. 
+
+<header>, <footer>, <nav>
+
+# Metadata Tags (Tags In HTML Head Tag)
+
+<base>:- Defines the base URL and a common target to for all relative URLs contained within a document.
+
+<basefont>:- Specifies the base font i.e. default font-color, font-size, or font-family for all the text in an HTML document.
+
+# Form Tags 
+
+<datalist>:- Used to provide the quick choices for an input field like an "autocomplete" feature.
+
+<fieldset>:- Used to group logically related controls and labels within a web form. 
+
+<legend>:- Used to assign a caption to a set of form controls.
+
+# List Tags
+
+<dl>, <dt>, <dd>:- Definition List
+<ul>, <ol>,<li>:- Ordered-Unordered List
+
+# Scripting Tags
+
+<noscript></noscript>:- Defines alternative content to display when the browser doesn't support scripting.
+<script></script>
+
+# Embedded Content Tags
+
+<figure>
+    <img src="discovery.jpg" alt="Space Shuttle">
+	<figcaption>NASA - Space Shuttle Discovery</figcaption>
+</figure>
+
+<audio controls="controls">
+    <source src="birds.mp3" type="audio/mpeg">
+</audio>
+
+<video controls="controls">
+    <source src="birds.mp3" type="audio/mpeg">
+</video>
+
+<object type="application/x-shockwave-flash">
+    <param name="movie" value="video/blur.swf">
+</object>
+
+<canvas id="myCanvas" width="300" height="200"></canvas>
+
+<embed type="video/webm" src="/media/examples/flower.mp4" width="250" height="200"></embed>
+
+<iframe src="hello.html" width="400" height="300" scrolling="auto"></iframe>
+
+
+# Input Tags
+
+<input type=" " name=" ">
+
+## Input Types
+
+   Date &amp; Time:-
+
+   		type="date", type="datetime", type="month", type="time", type="week"
+
+   User Keyboard Input:-
+
+   		type="email", type="password", type="number", type="search", type="tel", type="url"
+
+   Range Input:-
+
+   		type="range", type="color"
+
