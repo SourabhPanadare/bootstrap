@@ -1,0 +1,23 @@
+# Float:- instinctive method for positioning elements on a page.
+
+  float:left, float:right, float:none
+
+# Overflow:- One technique for containing floats within a parent element
+
+  overflow:auto, overflow:hidden, overflow:scroll, overflow:visible
+
+# Clearfix:- Seperates two left floated div from each others
+
+  clear:both
+
+# Position:- accepts five different values, each of which provide different ways to uniquely position an element.
+
+  position:static, position:relative, position:absolute, position:fixed
+
+# Z-index:- To change the order of how these elements are stacked, also known as the z-axis
+
+  z-index:3
+
+
+
+

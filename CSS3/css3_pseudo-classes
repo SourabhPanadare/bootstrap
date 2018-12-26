@@ -1,0 +1,49 @@
+# Link Pseudo-classes:- The :link and :visited pseudo-classes define if a link has or hasn’t been visited.
+
+	a:link {...}     :- To style an anchor which has not been visited
+	a:visited {...}  :- styles links that a user has already visited
+
+# Action Pseudo-classes:- Based on a users’ actions different pseudo-classes may be dynamically applied to an element
+
+	a:hover {...}    :- applied to an element when a user moves their cursor over the element
+	a:active {...}   :- applied to an element when a user engages an element, such as clicking on an 					    element. 
+	a:focus {...}    :- often by using the keyboard to tab from one element to another.
+
+# State Pseudo-classes:- Generated around the user interface state of elements, particularly within form elements.
+
+	input:enabled {...}        :- selects an input that is in the default state of enabled
+	input:disabled {...}       :- selects an input that has the disabled attribute tied to it
+
+	input:checked {...}        :- selects checkboxes or radio buttons that are, as you may expect, 									  checked. 
+	input:indeterminate {...}  :- When a checkbox or radio button has neither been selected nor unselected 								 it lives in an indeterminate state
+
+# Structural Pseudo-class:-  These structural and position based pseudo-classes come in a few different shapes and sizes, each of which provides their own unique function.
+
+	## :first-child, :last-child 
+
+	   li:first-child {...}    :- identifies the first list item within a list 
+	   li:last-child {...}     :- identifies the last list item within a list
+
+	## :nth-child(n), :nth-last-child(n)
+
+		li:nth-child(2n+3)  :-     Selects an element that matches the given number,from begining of 							   document
+		li:nth-last-child(3n+2):-  Selects an element that matches the given number or expression, from 						   end of document
+
+# Target Pseudo-class:- Selects an element whose ID attribute value matches that of the URI fragment 							identifier
+
+	section:target {...}
+
+    <section id="hello">...</section>
+
+# Empty Pseudo-class:- allows elements that do not contain children or text nodes to be selected. 
+
+    div:empty {...} 
+
+    <div><!-- No Content--></div>
+
+# Negation Pseudo-class:- Selects an element not represented by the stated argument.
+
+    div:not(.awesome)
+
+
+

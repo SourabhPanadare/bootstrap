@@ -106,3 +106,13 @@
             <dd>– definition2</dd>                      – definition2
       </dl>
      </body>
+
+
+# C.S.S3 Important Points
+
+  ##  overflow: auto; Works Similar to display table(i.e automatically adjust its height according to inner div)
+
+  ##  overflow: visible; Display contents eventough it exceeds outer container size
+
+  
+

@@ -1,0 +1,16 @@
+# Textual Pseudo-elements
+
+     .alpha:first-letter{...} :- identify the first letter of text within an element
+     .bravo:first-line{...}   :- will identify the first line of text within an element.
+
+# Generated Content Pseudo-elements:-  create new inline level pseudo-elements just inside the selected 									   element.
+
+     div:before{...}  :- Creates a pseudo-element inside the selected element at the beginning
+     a:after{...}     :- Creates a pseudo-element inside the selected element at the end
+
+# Fragment Pseudo-element
+
+     ::-moz-selection{...} :- identifies part of the document that has been selected, or highlighted, by a 							user’s actions.
+
+
+
