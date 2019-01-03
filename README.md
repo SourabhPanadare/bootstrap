@@ -1,146 +1,129 @@
-# Classes
+# OOPS Concept (House As Example)
 
-	Lead Text: Make a paragraph stand out(Make text bold).
-
-		   <p class="lead">...</p>
-
-	Small Text: set text at 85% the size of the parent
-
-		  <p class="small">...</p>
-
-	Bold & italic :
-
-		  <strong>rendered as bold text</strong>
-		  <em>rendered as italicized text</em>
-
-	Strike Through: For indicating blocks of text that are no longer relevant
-
-		    <s>This line of text is meant to be treated as no longer accurate.</s>
-
-	Alignment Classes:
-
-		  .text-left, .text-center, .text-right, .text-justify, .text-nowrap
-
-	Transformation Classes:
-
-		  .text-lowercase, .text-uppercase, .text-capitalize
-
-	BlockQuotes: Add vertical Dash before and after text(after and before dash styling)
-
-		  <blockquote>
-		  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-		  </blockquote>
-
-		  <blockquote class="blockquote-reverse">
-		  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-		  </blockquote>
-
-	Lists:
-
-		  <ul class="list-unstyled">
-		    <li>...</li>
-		  </ul>
-
-		  <ul class="list-inline">
-		    <li>...</li>
-		  </ul>
-	Close:
-		<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-
-	Caret:
-		<span class="caret"></span>
-
-	Floats:
-
-	      .pull-left, .pull-right, .center-block
-
-	Clearfix:
-
-	      .clearfix
-
-	Hide Show:
-
-	      .show, .hidden-xs, .hidden-sm, .hidden-md, .hidden-lg
-
-	Responsive Embed: Responsive audio video container
-
-	      <div class="embed-responsive embed-responsive-16by9">
-		    <iframe class="embed-responsive-item" src="..."></iframe>
-	      </div>
+	 In a house, we will have rooms like a living room, bedroom, kitchen and items like TV, refrigerator and so on. The house owner can access and use all the rooms and room's items. The same as for a class with a group of methods and variables. Rooms and each room's items are examples of methods and variables. So we now have a complete house with all its rooms and room's items. The house owner can access and use all the rooms and room's items. To access and use a class, methods and variables here we use Objects. Objects are an instance of a class.
 
 
-# Javascript Component
+  ## Class:- Empty House, An Empty Function during initialization
+
+  ## Methods/Functions:- Rooms Inside Empty House
+
+  ## Variable:- Items Inside The Room
+
+  ## Object:- Access Right to use all the room and room items
+
+  ## Encapsulation:-  Hides the members or variables from outside the class.
+
+  	 House security guard limitation is at the entrance of the house. The security guard doesn't need to be aware of what is happening inside the house. Therefore, the House Owner will hide everything that happens inside from the security guard for greater safety. 
+
+  ## Abstraction:- Shows to and shares some common information with the user.
+
+      In our house we will have a servant. Servants can go to all rooms and do cleaning and other work. The house owner can give full rights or some partial rights to the servant for accessing his house. 
+
+      Private declared variables and the methods are not shared with the servant but the public variable and methods are shared with the servant.
+
+  ## Inheritance:- Inheritance is nothing but accessing and using all base class variables and methods in the derived class.
+
+  	 ### Single level Inheritance:- Single Base and Single Derived Class.
+
+  	 	 public class baseClass {  
+
+  	 	 }
+
+  	 	 public class DerivedClass : baseClass  {
+
+  	 	 }
+
+  	 ### Multi level Inheritance:- Single Base and Multiple Derived Class.
+
+  	     public class baseClass {  
+
+  	 	 }
+
+  	 	 public class DerivedClass : baseClass  {
+
+  	 	 }
+
+  	 	 public class DerivedClass2 : DerivedClass1 { 
+
+  	 	 }
+
+  ## Polymorphism:- Ability of an object to take on many forms.
+
+  	### Method Overloading:-  Same method name used for more than one method with different argument(s).
+
+  		ex:- public void BedRoom(String nameandColor) {}
+  		     public void BedRoom(String MemberName, String Color) {}
+
+  		objHouseOwner.BedRoom("My Name is Shanu I like Lavender color");
+  		objHouseOwner.BedRoom("SHANU", "Lavender"); 
+  
+  	### Method Overriding:- Same method name used for more than one method with same argument(s) but in different class.
+
+  		class house{
+  			public void BedRoom(String nameandColor) {
+
+  			}
+  		}
+
+  		class subHouse : house{
+  			objHouseOwner.BedRoom("My Name is Shanu I like Lavender color");
+  			objHouseOwner.BedRoom("My Name is Afraz I like Light Blue color");  
+  		}
 
 
-	Scroll Spy: changes navigation color on scroll(active)
+# Note:- Variable :- Access-Modifiers Data-Type Variable-Name
+  
+  ## Access-Modifiers:- 
 
-		  <body data-spy="scroll" data-target="#navbar-example">
-		    <div id="navbar-example">
+  	public: Access is not restricted.
 
-		    </div>
-		  </body>
+  	private: Access is limited to the containing type. (varible restricted to private method only)
 
-		  or  $('body').scrollspy({ target: '#navbar-example' });
+    protected: Access is limited to containing class and its derived class.
 
-	Tabs: Provides navigation tabs with content(hide show)
+    internal : Access limited to particular document , not accessible outside of document.
 
-		  <ul class="nav nav-tabs" role="tablist">
-		      <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-		      <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-		      <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-		      <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-		  </ul>
 
-	<!-- Tab panes -->
-		<div class="tab-content">
-		      <div role="tabpanel" class="tab-pane active" id="home">...</div>
-		      <div role="tabpanel" class="tab-pane" id="profile">...</div>
-		      <div role="tabpanel" class="tab-pane" id="messages">...</div>
-		      <div role="tabpanel" class="tab-pane" id="settings">...</div>
-		</div>
+    private:- 
 
-		$('#someTab').tab('show')
+      class house { 
 
-	ToolTips: Shows little tooltip
+		private int SaftyLoackerKeyNo = 10001;  
+    	public String roomCleanInstructions = "Clean All rooms";  
 
-	      <!-- HTML to write -->
-	      <a href="#" data-toggle="tooltip" title="Some tooltip text!">Hover over me</a>
+    	private void saftyNos()  
+        {  
+            int SaftyLoackerKeyNo is only accesible in this method;   
+        } 
 
-	      <!-- Generated markup by the plugin -->
-	      <div class="tooltip top" role="tooltip">
-		<div class="tooltip-arrow"></div>
-		<div class="tooltip-inner">
-		    Some tooltip text!
-		</div>
-	      </div>
+        public void saftyNos()
+        {
+        	Can't Access SaftyLoackerKeyNo Here;
+        }
 
-	      $('#element').tooltip('show')
+      }
 
-	Popover: Similar to tooltip (a box with content inside it)
+      protected:- 
 
-	      <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing 			content. It's very engaging. Right?">Click to toggle popover</button>
+       class house{
+       		public String roomCleanInstructions = "Clean All rooms"; 
 
-	      $('#example').popover('show')
+       		public void saftyNos()
+	        {
+	        	can access roomCleanInstructions here;
+	        }
+       }
 
-	Collapse: A collapsable div
+       class subHouse : house{
+       		public void saftyNos()
+	        {
+	        	can access roomCleanInstructions here;
+	        }
+       }
 
-		<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"  aria- 			controls="collapseExample">Link with href
-		</a>
-
-		<div class="collapse" id="collapseExample">
-		  <div class="well">
-
-		  </div>
-		</div>
-
-		$('.collapse').collapse('toogle')
-
-	Affix:  Used for position fixed (sticky element)
-
-		  <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-		  ...
-		  </div>
-
-		  $('#myAffix').affix({
-		    offset: 15
-		  })
+       class secondHouse{
+       		public void saftyNos()
+       		{
+       			cannot access roomCleanInstructions here;
+       		}
+       }

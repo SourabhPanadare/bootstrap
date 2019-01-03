@@ -1,0 +1,238 @@
+# class (SourabhHouseClass)
+
+  class SourabhHouseClass {  
+
+  }  
+
+# object (objHouseOwner)
+
+  SourabhHouseClass objHouseOwner = new SourabhHouseClass(); 
+
+# variable (Access-Modifiers Data-Type Variable-Name)
+
+  int noOfTV = 0;
+  public String yourTVName;  
+  private Boolean doYouHaveTV = true;  
+
+# Functions/Method (void, return, withParameters)
+
+  class SourabhHouseClass {  
+
+     int NoofChair = 0;  
+     public String YOURTVName;  
+     private Boolean DoyouHaveTV = true;  
+    
+  
+    // Function/Method with void and no parameter  -- here void means no return type  
+
+    public void veranda()                              /*------------Cant Return Any Value-----------*/
+    {  
+        Console.WriteLine("Welcome to Veranda");  
+        Console.WriteLine("How Many Chairs Do you have in your Veranda");  
+        NoofChair = Convert.ToInt32(Console.ReadLine());  
+        Console.WriteLine("I have total " + NoofChair + " Chairs in my Veranda");  
+    }  
+  
+  
+    // Function/Method with Return type as String  
+
+    public string TVNAME()                             /*------------Can Return Any Value-----------*/
+    {  
+        Console.WriteLine("Enter Your TV Brand NAME");  
+        YOURTVName = Console.ReadLine();  				/*-------------Reading Value From User---------*/
+        return YOURTVName;  
+    }  
+
+  
+    // Function/Method with parameter 
+
+    public void BedRoomSingle(String nameandColor)     /*------------Cant Return Any Value-----------*/
+    {  
+        Console.WriteLine(nameandColor);             
+    }  
+  
+
+    // Same Function Name with Different Paramenter
+
+    public void BedRoomDouble(String MemberName,String Color)  /*-----Cant Return Any Value-----------*/
+    {  
+        Console.WriteLine(MemberName + " Like " + Color + "Color");  
+    }  
+  
+  
+    static void Main(string[] args)  
+    {  
+        
+        SourabhHouseClass objHouseOwner = new SourabhHouseClass();  
+  
+  
+        objHouseOwner.veranda(); 
+
+        String returnvalue = objHouseOwner.TVNAME();  
+        Console.WriteLine("Your TV BRAND NAME IS: "+returnvalue);  
+
+        objHouseOwner.BedRoomSingle("My Name is Shanu I like Lavender color");   
+        objHouseOwner.BedRoomDouble("SHANU", "Lavender");  
+       
+        Console.ReadLine();  								/*---------Reading Value From User---------*/
+
+    }  
+}
+
+# Encapsulation (private variable of the class cannot be accessed outside of the class.)
+
+  public class houseSecurityClass  						/*----Cant Access noofLockerinHouse Variable---*/
+	{  
+	    public int noofSecurity;  
+	    public String SecurityName = String.Empty;  
+	}  
+	  
+   public class Houseclass  
+	{  
+	    private int noofLockerinHosue = 2;  
+	    public string OwnerName = String.Empty;  
+	}
+
+# Abstraction (shares some common information with the user.)
+
+  public class HouseServerntClass {  
+	      
+	    private int SaftyLoackerKeyNo = 10001;  
+	    public String roomCleanInstructions = "Clean All rooms";  
+	  
+        private void saftyNos() {  						/*-------Can Access roomCleanInstructions-----*/
+            Console.WriteLine("My SaftyLoackerKeyNo is" + SaftyLoackerKeyNo);  
+        }  
+	  
+	    public void roomCleanInstruction() {            /*------Cant Access SaftyLoackerKeyNo int----*/
+	         Console.WriteLine(roomCleanInstructions);  
+	    }  
+	  
+	} 
+
+# Inheritance ( accessing and using all base class variables and methods in the derived class.)
+
+	## Single level Inheritance:
+
+    public class baseClass  { 
+
+	    private void privateMethod()  
+	    {  
+	        Console.WriteLine("private Method");  
+	    }  
+	  
+	    public void publicMethod()  
+	    {  
+	        Console.WriteLine("This Method Shared");  
+	    }  
+
+	}  
+
+	public class DerivedClass : baseClass {  
+
+	    static void Main(string[] args)  
+	    {  
+	        DerivedClass obj = new DerivedClass();  
+	        obj.publicMethod();  
+
+	  		//obj.privateMethod(); //error as private method can not be accessed in Derived Class
+
+	    }  
+	  
+	} 
+
+	## Multi level Inheritance: 
+
+	public class baseClass {  
+
+	    private void privateMethod() {  
+	        Console.WriteLine("private Method");  
+	    }  
+  
+	    public void publicMethod() {  
+	        Console.WriteLine("This Method Shared");  
+	    }  
+	} 
+
+
+	public class DerivedClass1 : baseClass  
+	{  
+	    public void DerivedClass1()  
+	    {  
+	        Console.WriteLine("Derived Class 1");  
+	    }  
+	}  
+
+	public class DerivedClass2 : DerivedClass1  
+	{  
+	    static void Main(string[] args)  
+	    {  
+	        DerivedClass2 obj = new DerivedClass2();  
+	        obj.publicMethod();  
+	        obj.DerivedClass1();  
+
+	        //obj.privateMethod(); //error as private method can not be accessed in Derived Class  
+	    }  
+	  
+	} 
+
+# Polymorphism 
+
+	## Method Overloading (Using Same Method With Different Parameters)
+
+	class HouseOwnerClass  {  
+    
+	    //Function with parameter  
+	    public void BedRoom(String nameandColor)  
+	    {  
+	        Console.WriteLine(nameandColor);  
+	    }  
+	  
+	    // Same Function Name with Different Paramenter  
+	    public void BedRoom(String MemberName, String Color)  
+	    {  
+	        Console.WriteLine(MemberName + " Like " + Color + "Color");  
+	    }  
+  
+	    static void Main(string[] args)  
+	    {  
+	        HouseOwnerClass objHouseOwner = new HouseOwnerClass();  
+	         
+	      /*-------------- BedRoom Method is used twice with different parameters---------*/ 
+	        objHouseOwner.BedRoom("My Name is Shanu I like Lavender color");  
+	        objHouseOwner.BedRoom("SHANU", "Lavender");  
+	        Console.ReadLine();  
+	  
+	    }  
+	}  
+
+	## Method Overridding (Using Same Method ,Same Parameters but should be in subclass)
+
+	class HouseOwnerClass  {  
+    
+	    //Function with parameter  
+	    public void BedRoom(String nameandColor)  
+	    {  
+	        Console.WriteLine(nameandColor);  
+	    }  
+	  
+	    // Same Function Name with Different Paramenter  
+	    public void BedRoom(String MemberName, String Color)  
+	    {  
+	        Console.WriteLine(MemberName + " Like " + Color + "Color");  
+	    }  
+	}  
+
+	public class DerivedClass : HouseOwnerClass {  
+
+	    static void Main(string[] args)  
+	    {  
+	        DerivedClass obj = new DerivedClass();  
+	        
+	        objHouseOwner.BedRoom("My Name is Shanu I like Lavender color");  
+        	objHouseOwner.BedRoom("My Name is Afraz I like Light Blue color");
+
+	    }  
+	  
+	} 
+

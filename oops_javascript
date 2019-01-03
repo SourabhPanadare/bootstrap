@@ -1,0 +1,101 @@
+# Class
+
+  var personClass = function () {};
+
+
+# Object
+
+  var personObject = new personClass();
+
+
+# Constructor & Property
+
+  var personClass = function (first, last) {
+  	this.firstName = first;
+  	this.lastName = last;
+  }
+
+
+  /*---------------------------------Javascript Constructor Initiator------------------------*/
+  	var personObject1 = new personClass('sourabh','panadare'); 
+  	var personObject2 = new personClass('rohan','panadare');
+
+  /*--------------------------------Javascript Property Initiator--------------------------*/
+  	console.log(personObject1.firstName);
+  	console.log(personObject2.lastName);
+
+
+# Method
+
+  var personClass = function (first, last) {
+  	this.firstName = first;
+  	this.lastName = last;
+  }
+
+
+  personClass.prototype.sayHello = function() {
+	  console.log("Hello, I'm " + this.firstName);
+  };
+
+
+  /*---------------------------------Javascript Constructor Initiator------------------------*/
+ 	 var personObject1 = new personClass('sourabh','panadare'); 
+  	 var personObject2 = new personClass('rohan','panadare');
+
+  /*----------------------------------Javascript Method Initiator----------------------------*/
+     personObject1.sayHello();
+     personObject2.sayHello();
+
+
+# Inheritance & Encapsulation
+
+  var personClass = function (first, last) {
+
+  	this.firstName = first;
+  	this.lastName = last;
+  	
+  }
+
+  personClass.prototype.personFake = function() {
+      return 'This is Encapsulation Function';
+  }
+
+  personClass.prototype.personInfo = function() {
+	  return this.firstName + " " + this.lastName; 
+  };
+
+
+/*-------------------------Secondary Class Depend On personClass---------------------*/
+
+   var ageClass = function (first,last,age){
+
+    personClass.call(this, first, last);      /*-----------Javascript Inheritence Initiator ----------*/
+  	this.age = age;
+
+  }
+  
+  // Create a ageClass.prototype object that inherits from personClass.prototype.
+  ageClass.prototype = Object.create(personClass.prototype);
+
+  // Set the "constructor" property to refer to ageClass
+  ageClass.prototype.constructor = ageClass;
+  
+  
+  
+  ageClass.prototype.personInfo = function() {
+  	   return this.firstName + " " + this.lastName + " " + this.age; 
+  };
+
+/*----------------------------------------------------------------------------------------*/
+
+  var personInfoObj = new ageClass("Janet","Hogwart","28");
+    
+  console.log(personInfoObj.personInfo());
+
+  console.log(personInfoObj.personFake());
+
+
+Note:- personInfoObj.personFake is Encapsulation Mechanism where ageClass is not related to personFake() Property but able to call it due to encapsulation where it can initiate all the property of personClass().  
+
+
+# 
