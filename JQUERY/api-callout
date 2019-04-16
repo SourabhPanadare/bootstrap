@@ -1,0 +1,95 @@
+1. GetJson Method
+
+    $.getJSON( "data.json", function() {
+      console.log( "success" );
+    })
+    .done(function() {
+      console.log( "second success" );
+    })
+    .fail(function() {
+      console.log( "error" );
+    })
+    .always(function() {
+      console.log( "complete" );
+    });
+
+    .complete(function() {
+       console.log( "second complete" );
+    });
+
+    /*----------------------------------------Or---------------------------------*/
+    $.getJSON( "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap", function() {
+      console.log( "success" );
+    })
+
+
+2. Post Method
+
+    $.post( "data.php", function() {
+      console.log( "success" );
+    })
+    .done(function() {
+      console.log( "second success" );
+    })
+    .fail(function() {
+      console.log( "error" );
+    })
+    .always(function() {
+      console.log( "finished" );
+    });
+
+
+3. Ajax Method
+
+    $.ajax({
+        type: "GET",
+        url: 'data.php',
+        success: function(data){
+            console.log(data);
+        }
+    });
+
+    $.ajax({
+        type: "GET",
+        url: 'data.php',
+        data: {name: 'Wayne', age: 27, country: 'Ireland'},
+        success: function(data){
+            console.log(data);
+        }
+    });
+
+    $.ajax({
+        type: "POST",
+        url: 'submissiondata.php',
+        data: {name: 'Wayne', age: 27},
+        success: function(data){
+            console.log(data);
+        }
+    });
+
+/*-----Realtime Example-----*/
+
+    $.ajax({
+      type: "POST",
+      url: "http://",
+      data: "username="+username+"&fullname="+fullname,
+      success: function(data){
+        console.log("in ajax success... Data is : "+username);
+      }
+    });
+
+
+    $.ajax({
+      type: "GET",
+      url: "http://",
+      data: 'method=customdata',
+      success: function(data, textStatus, jqXHR){
+        var jsonresponse = $.parseJSON(data);
+        var test = "";
+        for( i = 0; i < jsonresponse.length; i++ ) {
+          test += "<div class=''>";
+          test += "</div>";
+        }
+        $(document).html(test);
+      }
+    });

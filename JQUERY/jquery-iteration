@@ -1,0 +1,17 @@
+  $.each([ 52, 97 ], function( index, value ) {
+    console.log(value);
+  });
+
+  $.each({ name: "John", lang: "JS" }, function( key, value ) {
+    console.log(value);
+  });
+
+  var arr = [ "one", "two", "three", "four", "five" ];
+  $.each( arr, function( key, value ) {
+    console.log(value);
+  });
+
+  var obj = { one: 1, two: 2, three: 3, four: 4, five: 5 };
+  $.each( obj, function( key, value ) {
+     console.log(value);
+  });

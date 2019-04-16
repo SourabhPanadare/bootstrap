@@ -1,0 +1,79 @@
+/*---------------------------Jquery Get---------------------------*/
+
+var vr = $("#div").text();
+
+var vr = $("#div").html();
+
+var vr = $("#div").val();
+
+var vr = $("#div").attr("data-name");
+
+/*---------------------------Jquery Set--------------------------*/
+
+$("#div").text(vr);
+
+$("#div").html(vr);
+
+$("#div").val(vr);
+
+$("#div").attr("data-name",vr);
+
+/*--------------------------Callback for Get-Set----------------*/
+
+$("#div").text(function(i, origText){
+    return origText;
+});
+
+$("#div").html(function(i, origText){
+    return origText;
+});
+
+$("#div").attr("href", function(i, origValue){
+    return origValue;
+});
+
+/*-------------------------Add Elements ----------------------*/
+
+$("p").append("inserts content AT THE END.");
+
+$("p").prepend(" inserts content AT THE BEGINNING.");
+
+$("img").after("Some text after");
+
+$("img").before("Some text before");
+
+/*---------------------Remove Elements------------------------*/
+
+$("#div1").remove();
+
+$("#div1").empty();
+
+$("p").remove(".test, .demo");
+
+/*-------------------Class Element ----------------------------*/
+
+$("div").addClass("classname multipleclassname");
+
+$("div").removeClass("classname");
+
+$("div").toggleClass("classname");
+
+/*------------------CSS Method--------------------------------*/
+
+$("p").css("background-color","red");
+
+$("p").css({"border-color":"red",'background-color':'black'});
+
+/*-------------------------Jquery Dimensions------------------*/
+
+$(window).width();
+
+$(window).height();
+
+$('#div').innerWidth();
+
+$('#div').innerHeight();
+
+$('#div').outerWidth();
+
+$('#div').outerHeight();

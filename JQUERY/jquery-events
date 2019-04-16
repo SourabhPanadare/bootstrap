@@ -1,0 +1,61 @@
+/*---------------------------Mouse Events--------------------------*/
+
+$(document).on('click',function(){
+  console.log('clicked');
+});
+
+$(document).on('mouseenter',function(){
+  console.log('mouseenter');
+});
+
+$(document).on('mouseleave',function(){
+  console.log('mouseleave');
+});
+
+
+/*-------------------------keyboard Events--------------------*/
+
+$(document).on('keypress',function(){
+  console.log('keypressed');
+});
+
+$(document).on('keydown',function(){
+  console.log('keydown');
+});
+
+$(document).on('keyup',function(){
+  console.log('keyup');
+});
+
+/*-------------------------Form Events--------------------*/
+
+$('input').on('submit',function(){
+  console.log('submitted');
+});
+
+$('input').on('change',function(){
+  console.log('changed');
+});
+
+$('input').on('focus',function(){
+  console.log('focus');
+});
+
+$('input').on('blur',function(){
+  console.log('blur');
+});
+
+
+/*---------------------Windows Event--------------------*/
+
+$(window).load(function(){
+  console.log('loaded');
+});
+
+$(window).resize(function(){
+  console.log('resized');
+});
+
+$(window).scroll(function(){
+  console.log('scrolled');
+});

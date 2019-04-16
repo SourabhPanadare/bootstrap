@@ -1,0 +1,157 @@
+/*---------------------Responsive Height Width --------------------------------*/
+
+var wid = $(window).width();
+var hid = $(window).height();
+
+$("body").css({'width':wid +'px','height':hid +'px'});
+
+/*----------------------- Javascript Audio-------------------------------------*/
+
+var gameAudio = null;
+
+gameAudio = document.createElement('audio');
+gameAudio.setAttribute('src', 'gameAudio.wav');
+
+gameAudio.play();
+
+/*--Cordova Audio Plugin--*/
+loadAudio();
+var loadAudio = function() {
+  var src = "sounds/";
+  if(device.platform="Android") {
+    src = '/android_asset/www/'+src;
+  }
+  diceAudio = new Media(src+'diceAudio.wav', successAudioCB, failureAudioCB );
+
+}
+
+var successAudioCB = function() {
+  console.log('Success ');
+}
+
+var failureAudioCB = function( err ) {
+  console.log('Audio Error -> '+err.code+' '+err.message );
+}
+
+diceAudio.play();
+
+/*---------------------Different Intialization---------------------------------*/
+$(document).ready(function() {
+   // executes when HTML-Document is loaded and DOM is ready
+   console.log("document is ready");
+});
+
+$(function() {
+    // executes when HTML-Document is loaded and DOM is ready
+    console.log("document is ready");
+});
+
+(function ( $ ) {
+
+
+}( jQuery ));
+
+$(window).load(function() {
+   // executes when complete page is fully loaded, including all frames, objects and images
+   console.log("window is loaded");
+});
+
+$(window).scroll(function(){
+	console.log("window is scrolling");
+});
+
+$(window).on('scroll', function(){
+	console.log("window is scrolling");
+});
+
+$( window ).resize(function() {
+  console.log('window is resize');
+});
+
+$( window ).on( "orientationchange", function( event ) {
+  console.log(event.orientation);
+});
+
+
+/*------------------------------Canvas-----------------------------------------*/
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+canvas.width = $(window).width();
+canvas.height = $(window).height();
+
+ctx.clearRect(0,0, canvas.width, canvas.height());
+ctx.drawImage(image, 0, 0, $(window).width(), $(window).height(), canvas.width()/2,canvas.height()/2,canvas.width()/2, canvas.height()/2);
+ctx.fillStyle = '#fff';
+ctx.fillRect(0, 0, 1024, 1024);
+/*-----------------------------Jquery Functions--------------------------------*/
+
+var allcolor = ["red", "blue", "green", "yellow"];
+var pawnOut = {red:0,blue:0,green:0,yellow:0};
+
+
+ClearAllIntervals();
+
+function ClearAllIntervals() {
+  console.log('clear-interval');
+  for (var i = 1; i < 99999; i++)
+     window.clearInterval(i);
+}
+
+var randomize = function() {
+  var total = 0;
+  total = Math.floor(Math.random() * 8);
+  total = Math.floor((Math.random() * 6) + 1);
+  return total;
+}
+
+randomize();
+
+function startPointer(e) {
+
+  var touch = null;
+  try {
+    touch = e.touches[0] || e.changedTouches[0];
+    } catch (e) {
+  }
+  if (touch == undefined) {
+    touch = e;
+  }
+
+  mouse_x = touch.pageX;
+  mouse_y = touch.pageY;
+
+  dragging = false;
+}
+
+$(document).animate({
+    "top": hid/2.1+"px",
+    "left":wid/6+"px",
+    'width':wid/16+'px',
+    'height':wid/16+'px'
+} ,"slow"});
+
+var queryString = new Array();
+var searchValue;
+
+if (queryString.length == 0) {
+      if (window.location.search.split('?').length > 1) {
+          var params = window.location.search.split('?')[1].split('&');
+          for (var i = 0; i < params.length; i++) {
+              var key = params[i].split('=')[0];
+              var value = decodeURIComponent(params[i].split('=')[1]);
+              queryString[key] = value;
+          }
+      }
+}
+if (queryString["search"] != null) {
+    searchValue = queryString["search"];
+}
+console.log(searchValue);
+
+window.ondevicemotion = function(e) {
+  ax = event.accelerationIncludingGravity.x;
+  ay = event.accelerationIncludingGravity.y;
+
+};

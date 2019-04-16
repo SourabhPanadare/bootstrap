@@ -1,0 +1,56 @@
+/*------------------------------Ancestor------------------------------------*/
+<div><a><span></span></a></div>
+
+$("span").parent().css('border','1px solid red');    --> returns red border for <a> element
+
+$("span").parents().css('border','1px solid red');   --> returns red border for <div> element
+
+$("span").parentsUntil("div").css('border','1px solid red'); --> returns red border for <a> <span> element
+
+
+/*---------------------------Descendants-------------------------------------*/
+
+<div><a><span></span></a></div>
+
+$("div").children().css("border","2px solid red");   --> returns red border for <a> element
+
+$("div").children("span.first").css("border","2px solid red"); --> <div><a><span class="first"></span></a></div> --> returns red border for <a> element
+
+$("div").find("span").css("border","2px solid red");    -->  returns red border for <span> element
+
+$("div").find("*").css("border","2px solid red");  --> returns red border for all element
+
+
+/*----------------------------Siblings------------------------------------*/
+
+<div><p></p><h3></h3><h2></h2><h4></h4><p></p></div>
+
+$("h2").siblings().css({"border": "2px solid red"}); --> returns red border for all element inside div except h3
+
+$("h2").siblings("p").css({"color": "red", "border": "2px solid red"}); --> return red border for all p element inside div tag
+
+$("h2").next().css({"border": "2px solid red"}); --> return red border for next element i.e h4
+
+$("h2").prev().css({"border": "2px solid red"}); --> return red border for prev element i.e h3;
+
+$("h2").nextAll().css({"border": "2px solid red"}); --> return red border for all next element i.e h4 p;
+
+$("h2").prevAll().css({"border": "2px solid red"}); --> return red border for all prev element i.e h3 p;
+
+$("h2").nextUntil("h4").css({"border": "2px solid red"}); --> return red border for all next element until p i.e h4;
+
+$("h2").prevUntil("p").css({"border": "2px solid red"}); --> return red border for all prev element until p i.e h3;
+
+/*-----------------------Filtering---------------------------------------*/
+
+<div><p class="intro"></p><p></p></div>
+
+ $("div").first().css({"border": "2px solid red"}); --> return red border for first p element
+
+ $("div").last().css({"border": "2px solid red"});  --> return red border for last p element
+
+ $("div").eq(2).css({"border": "2px solid red"});   --> return red border for second p element
+
+ $("div").filter(".intro").css({"border": "2px solid red"}); --> return red border for all .intro class p i.e first p element
+
+ $("div").filter(".intro").css({"border": "2px solid red"}); --> return red border for all p element except .intro class
