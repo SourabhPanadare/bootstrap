@@ -7,7 +7,7 @@ function isPrime(n){
 
   while (n > divisor){
     if(n % divisor == 0){
-     return false; 
+     return false;
     }
     else
       divisor++;
@@ -20,12 +20,12 @@ O/P:- isPrime(137):- true; isPrime(237):- false;
 
 /*---------------------------------Nth Fibonacci Number----------------------------*/
 
-A series of numbers in which each number ( Fibonacci number ) is the sum of the two preceding numbers. 
+A series of numbers in which each number ( Fibonacci number ) is the sum of the two preceding numbers.
  remove duplicate members from an arrayThe simplest is the series 1, 1, 2, 3, 5, 8, etc.
 
 function fibonacci(n){
   var fibo = [0, 1];
-  
+
   if (n <= 2) return 1;
 
   for (var i = 2; i <=n; i++ ){
@@ -33,7 +33,7 @@ function fibonacci(n){
   }
 
  return fibo[n];
-} 
+}
 
 fibonacci(12);
 O/P:- 144;
@@ -45,7 +45,7 @@ Will start a while looping and keep an object/ associated array. If i find an el
 
 function removeDuplicate(arr){
   var exists ={},
-      outArr = [], 
+      outArr = [],
       elm;
 
   for(var i =0; i<arr.length; i++){
@@ -64,12 +64,12 @@ O/P:- [1, 3, 5, 6, 7, 8];
 /*---------------------------- Merge two sorted array ------------------------------*/
 
 function mergeSortedArray(a, b){
-  var merged = [], 
+  var merged = [],
       aElm = a[0],
       bElm = b[0],
       i = 1,
       j = 1;
-  
+
   if(a.length ==0)
     return b;
   if(b.length ==0)
@@ -79,7 +79,7 @@ function mergeSortedArray(a, b){
    if((aElm && !bElm) || aElm < bElm){
      merged.push(aElm);
      aElm = a[i++];
-   }   
+   }
    else {
      merged.push(bElm);
      bElm = b[j++];
@@ -107,7 +107,7 @@ O/P:- a = 3, b = 2;
 function reverse(str){
   var rtnStr = [];
   if(!str || typeof str != 'string' || str.length < 2 ) return str;
-  
+
   for(var i = str.length-1; i>=0;i--){
     rtnStr.push(str[i]);
   }
@@ -116,7 +116,7 @@ function reverse(str){
 
 function reverse(str){
   if(!str || str.length <2) return str;
-  
+
   return str.split('').reverse().join('');
 }
 
@@ -127,8 +127,8 @@ O/P:- "edud ecin a era uoy";
 
 function removeDuplicateChar(str){
   var len = str.length,
-      char, 
-      charCount = {}, 
+      char,
+      charCount = {},
       newStr = [];
   for(var i =0; i<len; i++){
     char = str[i];
@@ -148,6 +148,39 @@ function removeDuplicateChar(str){
 removeDuplicateChar('Learn more javascript dude');
 O/P:- "Lnmojvsciptu";
 
-/*-------------------------------Remove duplicate char----------------------------*/
+/*-------------------------------Check palindrome----------------------------*/
+If you reverse a word and it becomes same as the previous word, it is called palindrome.
 
+function isPalindrome(str){
+  var i, len = str.length;
+  for(i =0; i<len/2; i++){
+    if (str[i]!== str[len -1 -i])
+       return false;
+  }
+  return true;
+}
 
+function checkPalindrom(str) {
+    return str == str.split('').reverse().join('');
+}
+
+isPalindrome('madam');
+O/P:- true
+
+/*------------------------------- Sum of Two number from given unsorted Array----------------------------*/
+
+function sumFinder(arr, sum){
+  var len = arr.length;
+
+  for(var i =0; i<len-1; i++){
+     for(var j = i+1;j<len; j++){
+        if (arr[i] + arr[j] == sum)
+            return true;
+     }
+  }
+
+  return false;
+}
+
+sumFinder([6,4,3,2,1,7], 9);
+O/P:- true
