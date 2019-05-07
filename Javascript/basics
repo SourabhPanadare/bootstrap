@@ -1,0 +1,163 @@
+/*-------------------------------------Basic Function-----------------------*/
+var x = 10;
+var y = 20;
+
+function add(a,b) {
+   return a + b;
+}
+
+function divide(a,b) {
+    if(b == 0){
+        throw new Exception('Division by zero');
+    }
+    return a / b;
+}
+
+var addresult = add(x,y);;
+var divideresult = divide(x,y);
+console.log(addresult);
+console.log(divideresult);
+
+/*--------------------------------------Basic Array-------------------------*/
+var items = [];
+var items = [1, 2, 3];
+
+for(var i = 0; i < items.length; i++) {
+    console.log(items[i]);
+}
+
+Empty array in javascript
+let a = [1,2,3];
+a = [];
+a.length = 0;
+a.splice(0,a.length);
+
+while(a.length > 0) {
+    a.pop();
+}
+
+/*----------------------------------Basics OOPs concept---------------------*/
+  /*--------------Class--------------------*/
+  function Person(firstName, lastName ){
+      this.firstName = firstName;
+      this.lastName = lastName;
+  }
+  /*-------------Method-------------------*/
+  Person.prototype.getFullname = function(){
+      return this.firstName + ' ' + this.lastName;
+  }
+  /*------------Object--------------------*/
+  var john = new Person('John','Doe');
+
+  console.log(john.getFullname());
+
+/*---------------------------Async And Defer---------------------------------*/
+
+  async:- instructs the web browser to execute the JavaScript file asynchronously if possible(No guarantee in specific order execution)
+  defer:- if visible, asks the web browser to execute the script file after the document has been parsed fully.
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>JavaScript defer demonstration</title>
+      <script src="defer-script.js" defer></script>
+  </head>
+  <body>
+
+      <script src="async-script-1.js" async></script>
+      <script src="async-script-2.js" async></script>
+  </body>
+  </html>
+
+/*--------------------------Javascript Variables---------------------------*/
+  /*-----------------Variable Declaration-----------*/
+  var foo = "Hello",
+      bar = 100;
+
+  /*---------------Undefined vs Reference Error------*/
+  var foo;
+  console.log(foo); // undefined
+  console.log(bar); // ReferenceError: bar is not defined
+
+  /*-------------Global and local variables---------*/
+  var globalvariable = 'Hi';
+
+  function helloworld(){
+    var message = 'Hello World';
+    return message;
+    console.log(message);        //Hello World
+  }
+
+  console.log(helloworld());     //Hello World
+  console.log(message);          //Reference Error
+  console.log(globalvariable);   //Hi
+
+/*------------Strict Mode------------------*/
+  strict mode:- Throws Error if variable not declared globally.
+
+  'use strict';
+  function say() {
+      message = 'Hi'; // ReferenceError as message is not defined.
+      return message;
+  }
+  say(); // Hi
+  console.log(message); // Hi
+
+/*--------JavaScript variable hoisting-------*/
+  Hoisting is a mechanism that JavaScript engine moves all the variable declarations to the top of their scope, either function or global scope.
+
+  console.log(baz);
+  var baz = 'baz';
+
+  Equvalent To
+
+  var baz;          // varible baz is hoisted at the top.
+  console.log(baz); // undefined
+  baz = 'baz';
+
+/*--------------------------------------Data Types----------------------------*/
+
+  null, undefined, boolean, number, string
+
+  a. null:- is an empty object pointer.
+
+  if(obj != null) {
+
+  }
+  console.log(null == undefined); // true
+
+  b. undefined:-  when a variable is declared but not initialized.
+
+  var foo;
+  console.log(foo);        // undefined
+
+  c. boolean:- has two values: true and false
+
+  var YES = true;
+  var NO = false;
+
+  if(YES)
+  {
+      alert("This code block will be executed");
+  }
+
+  if(NO)
+  {
+      alert("This code block will not be executed");
+  }
+
+  d. number:-
+
+  var num = 100;
+  var oct = 060; // octal for 48
+  var d = 090; // intepreted as 90
+  var h = 0xf; // same as 0xF hexadecimal for 15
+  var f1 = 12.5; // floating number
+  var f4 = 2.17e6; // ~ 2170000 large number
+  console.log('a'/2); // NaN;
+
+  e. string:-
+
+  var foo = 'JavaScript';
+  foo = foo + ' String';

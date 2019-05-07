@@ -1,3 +1,5 @@
+/*-----------------------------------------------Interview Set One----------------------------------------*/
+
 1. Possible ways to create object in javascript:-
 
    Object constructor:-
@@ -154,5 +156,3 @@
       function myFunction() {
 
       }
-
-  

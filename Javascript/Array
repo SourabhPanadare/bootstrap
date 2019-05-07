@@ -1,0 +1,87 @@
+/*-------------------------------Javascript Array-------------------------*/
+  /*------------------Creating Javascript Array---------------*/
+  a. Array Constructor:- new Array() or Array()
+
+  var athletes = new Array(3); // creates an array with initial size 3
+  var scores = new Array(1, 2, 3); // create an array with three numbers 1,2 3
+  var signs = new Array('Red'); // creates an array with one element 'Red'
+
+  b. Array literal notation:- [element1, element2, element3];
+
+  var emptyArray = []; // empty array
+  var colors = ['red', 'green', 'blue'];
+
+  /*-----------------Accessing Javascript Array--------------*/
+  var mountains = ['Everest', 'Fuji', 'Nanga Parbat'];
+
+  console.log(mountains[0]); // 'Everest'
+  console.log(mountains[1]); // 'Fuji'
+
+  /*-----------------Size of an array----------------------*/
+  var mountains = ['Everest', 'Fuji', 'Nanga Parbat'];
+
+  console.log(mountains.length);
+
+  /*------------------Basic operations on arrays-----------*/
+  var seas = ['Black Sea', 'Caribbean Sea', 'North Sea', 'Baltic Sea'];
+
+  console.log(Array.isArray(seas)); // true
+  console.log(seas.toString()); // Black Sea,Caribbean Sea,North Sea,Baltic Sea
+  console.log(seas.valueOf());
+  console.log(seas.join('|'));  // Black Sea|Caribbean Sea|North Sea|Baltic Sea
+
+/*---------------------Array Push And Pop Example-----------------------*/
+  a. Push Method:- Allows you to add one or more elements to the end of the array
+
+  var stack = [];
+  stack.push(1);  //[1]
+  stack.push(2);  //[1,2]
+  stack.push(3);  //[1,2,3]
+
+  b. Pop Method:- Allows you to add one or more elements to the end of the array
+
+  var stack = [1,2,3]
+  stack.pop(); //[1,2]
+  stack.pop(); //[1]
+  stack.pop(); //[]
+
+  ex.Reverse a string:-
+
+  function reverse(str) {
+      var stack = [];
+      // push letter into stack
+      for (var i = 0; i < str.length; i++) {
+          stack.push(str[i]);
+      }
+      // pop letter from the stack
+      var reverseStr = '';
+      while (stack.length > 0) {
+          reverseStr += stack.pop();
+      }
+      return reverseStr;
+  }
+
+  console.log(reverse('JavaScript Stack')); //kcatS tpircSavaJ
+
+/*----------------------- Array Splice: Delete, Insert, and Replace------------*/
+
+  Allows you to insert new elements into the middle of an array.
+  You can use this method to delete and replace existing elements as well.
+
+  Array.splice(position,num);
+
+  var scores = [1, 2, 3, 4, 5];
+  var deletedScores = scores.splice(0,3);
+
+  console.log(scores);          //[1,2,3] num = 3
+  console.log(deletedScores);   //[4,5]
+
+  /*------------Inserting elements using JavaScript array splice-------*/
+
+  var colors = ['red', 'green', 'blue'];
+  colors.splice(2, 0, 'purple');          //["red", "green", "purple", "blue"]
+
+  /*------------Replacing elements using JavaScript array splice---------*/
+
+  var languages = ['C', 'C++', 'Java', 'JavaScript'];
+  languages.splice(1, 1, 'Python');       //["C", "Python", "Java", "JavaScript"]

@@ -1,0 +1,82 @@
+/*--------------------------------------If Statement---------------------*/
+  if (condition_1) {
+
+  } else if (condition_2) {
+
+  } else {
+
+  }
+
+  condition ? expression_1 : expression_2
+  var allowRegister = age > 18 ? true : false;
+
+/*-------------------------------------Switch Case----------------------*/
+  switch (expression) {
+      case value_1:
+          statement_1;
+          break;
+      case value_2:
+          statement_2;
+          break;
+      case value_3:
+          statement_3;
+          break;
+      default:
+          default_statement;
+  }
+
+  Similar With if-else
+
+  if (expression == value_1) {
+      statement_1;
+  } else if (expression == value_2) {
+      statement_2;
+  } else if (expression == value_3) {
+      statement_3
+  } else {
+      default_statement;
+  }
+
+/*---------------------------While Statement-----------------------*/
+  If the expression evaluates to true, the while statement executes the statement. If the expression evaluates to false, execution continues with the statement after the while loop.
+
+  var count = 1;
+  while (count < 10) {
+      count +=2;
+  }
+
+/*--------------------------Do-While Statement---------------------*/
+  The do-while loop statement creates a loop that executes a block of code until a test condition evaluates to false.
+
+  let count = 0;
+  do {
+      count++;
+  } while (count < 10);
+
+/*---------------------------For Statement ---------------------------*/
+  Allows you to create a loop with three optional expressions
+
+  for (let j = 1; j < 10; j += 2) {
+      console.log(j);
+  }
+
+  var j = 1;
+  for (; j < 10; j += 2) {
+      console.log(j);
+  }
+
+  for (let j = 1; ; j += 2) {
+      console.log(j);
+      if (j < 10) {
+          break;
+      }
+  }
+
+  var j = 1;
+  for (; ;) {
+      // terminate the loop if j is greater than 10;
+      if (j > 10) break;
+      console.log(j);
+      // increase the counter j
+      j += 2;
+  }
