@@ -18,6 +18,43 @@ var divideresult = divide(x,y);
 console.log(addresult);
 console.log(divideresult);
 
+/*---------------------------------Closure Function-------------------------*/
+
+function greeting() {
+    var message = 'Hi';
+
+    function sayHi() {
+        alert(message);
+    }
+
+    sayHi();
+}
+greeting();
+
+function greeting() {
+    var message = 'Hi';
+
+    function sayHi() {
+        alert(message);
+    }
+
+    return sayHi;
+}
+var hi = greeting();
+hi(); // still can access the message variable
+
+function greeting(message) {
+   return function(name){
+        return message + ' ' + name;
+   }
+}
+var sayHi = greeting('Hi');
+var sayHello = greeting('Hello');
+
+console.log(sayHi('John')); // Hi John
+console.log(sayHello('John')); // Hello John
+
+
 /*--------------------------------------Basic Array-------------------------*/
 var items = [];
 var items = [1, 2, 3];
