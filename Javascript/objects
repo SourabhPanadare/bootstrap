@@ -34,4 +34,91 @@
   var name = new Foo('Sourabh');
   console.log(name.whoAmI());  //I am Sourabh
 
-/*---------------------------------
+/*---------------------------------Create Object in Javascript----------------*/
+
+  /*------------------Factory Pattern------------------*/
+  function createAnimal(name) {
+      var obj = new Object();
+      obj.name = name;
+      obj.identify = function() {
+          console.log("I'm " + obj.name);
+      }
+      return obj;
+  }
+
+  var tom = createAnimal('Tom');
+  var jerry = createAnimal('Jerry');
+  tom.identify(); // I'm Tom
+  jerry.identify(); // I'm Jerry
+
+  /*----------------Constructor Pattern----------------*/
+
+  function Animal(name) {
+      this.name = name;
+      this.identify = function() {
+          console.log("I'm " + this.name);
+      };
+  }
+
+  var donald = new Animal('Donald');
+  var bob = new Animal('Bob');
+  donald.identify(); // I'm Donald
+  bob.identify(); // I'm Bob
+
+  /*---------------Prototype pattern------------------*/
+
+  function Animal() {
+
+  }
+
+  Animal.prototype.name = 'noName';
+  Animal.prototype.identify = function() {
+      console.log("I'm " + this.name);
+  }
+
+  var donald = new Animal();
+  donald.name = 'Sourabh'; // shadow the name property
+  donald.identify(); // I'm Sourabh
+
+  /*------------Constructor / Prototype pattern-------------*/
+
+  function Animal(name) {
+      this.name = name;
+  }
+
+  Animal.prototype.identify = function() {
+      console.log("I'm " + this.name);
+  }
+
+  var donald = new Animal('Donald');
+  donald.identify(); // I'm Donald
+
+  var bob = new Animal('Bob')
+  bob.identify(); // I'm Bob
+
+  /*-------------Parasitic constructor pattern------------*/
+
+  function Animal(name) {
+      var obj = new Object();
+      obj.name = name;
+      obj.identify = function() {
+          console.log("I'm " + obj.name);
+      }
+      return obj;
+  }
+
+  var dog = new Animal('Bingo');
+  dog.identify(); // I'm Bingo
+
+  /*-------------Durable constructor pattern-------------*/
+
+  function secureAnimal(name) {
+      var obj = new Object();
+      obj.identify = function() {
+          console.log(name); //  no this
+      }
+      return obj;
+  }
+
+  var alien = secureAnimal('?#@');
+  alien.identify(); // ?#@

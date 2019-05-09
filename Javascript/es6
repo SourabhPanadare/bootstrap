@@ -1,1 +1,162 @@
-/*-------------------------------------------------*/
+/*-------------------------------------ES6 Constants-------------------------*/
+
+  const VARIABLE_NAME = value;
+
+  const PI = 3.141593
+  const RATE = 0.1;
+
+/*-----------------------------------ES6 Scoping-----------------------------*/
+  /*--------------------Traditional variable defination--------*/
+  var i, x, y;
+  for (i = 0; i < a.length; i++) {
+      x = a[i];
+  }
+  for (i = 0; i < b.length; i++) {
+      y = b[i];
+  }
+
+  /*--------------------Block-Scope Variables------------------*/
+  for (let i = 0; i < a.length; i++) {
+      let x = a[i]
+  }
+  for (let i = 0; i < b.length; i++) {
+      let y = b[i]
+  }
+
+  /*--------------------Traditional function defination--------*/
+  (function () {
+      var foo = function () { return 1; }
+      foo() === 1;
+      (function () {
+          var foo = function () { return 2; }
+          foo() === 2;
+      })();
+      foo() === 1;
+  })();
+
+  /*-------------------Block-Scope Function--------------------*/
+  {
+      function foo () { return 1 }
+      foo() === 1
+      {
+          function foo () { return 2 }
+          foo() === 2
+      }
+      foo() === 1
+  }
+
+/*---------------------------Arrow Functions----------------------------------*/
+  
+  const myArray=['tony','Sara','Said',5];
+  
+  /*-------------------Traditional Way---------------------*/
+  function myFunc(name){
+    return 'Hello' + name;
+  }
+  console.log(myFunc('said'));
+
+  let Arr1 = myArray.map(function(item){
+	return item;
+  });
+  console.log(Arr1); //["tony","Sara","Said",5]
+
+  /*--------------------ES6 Way---------------------*/
+  const myFunc = name =>{
+	return `Hi ${name}`;
+  }
+			or
+  const myFunc = name =>`Hi ${name}`;
+  console.log(myFunc('said'));
+  
+  let Arr2 = myArray.map(item =>{
+	return item;
+  }
+  
+  let Arr2 = myArray.map(item => item);
+  console.log(Arr2);
+  
+/*---------------------------Template Literals----------------------------------*/  
+  /*------------------Traditional Way-------------------*/
+  function myFunc1(name,age){
+	return 'Hi '+ name +' Your age is '+ age +' year old';
+  }
+  console.log(myFunc1('Said',22));
+
+  /*-------------------ES6 Way-------------------------*/
+  const myFunc= (name,age)=>{
+	return `Hi ${name}, Your age is ${age} year old!`;
+  }
+  console.log(myFunc1('Said',22));
+  
+/*-----------------------------Default Parameters-------------------------------*/
+  /*-----------------Traditional Way--------------------*/
+  function f (x, y ,z){
+	if(y === undefined)
+		y = 7;
+	if(z === undefined)
+		z = 42;
+  }
+  console.log(f(50));
+  
+  /*------------------ES6 Way-------------------------*/
+  function f(x, y = 7, z = 42){
+	return x + y + z
+  }
+  console.log(f(50));
+  
+  const myFunc=(name,age)=>{
+	return `Hello ${name} your age is ${age} year old?`
+  }
+  console.log(myFunc('sid')); //Hello sid your age is undefined year old? 
+  
+  const myFunc=(name,age=22)=>{
+	return `Hello ${name} your age is ${age} year old?`
+  }
+  console.log(myFunc('sid')); //Hello sid your age is 22 year old?
+
+/*-------------------------------Array and object destructing-------------------*/
+  const contacts={
+	name:'Sid',
+	familyName:'Mehta',
+	age:22
+  }
+  
+  /*--------------------Traditional Way---------------------*/
+  
+  let Name=contacts.name;
+  let FamilyName=contacts.familyName;
+  let MyAge=contacts.age;
+
+  console.log(Name);		//Sid
+  console.log(FamilyName);	//Mehta
+  console.log(MyAge);		//22
+  /*--------------------ES6 Way-----------------------------*/
+  
+  let{name,familyName,age}=contacts
+  console.log(name);		//Sid
+  console.log(familyName);  //Mehta
+  console.log(age);			//22
+  
+  const Arr=['Lionel','John','Layla',20];
+  
+  let [value1,value2,value3]=Arr;
+  console.log(value1);	//Lionel
+  console.log(value2);	//John
+  console.log(value3);	//Layla
+
+/*-------------------------------Import and export-----------------------------*/  
+
+	export default function detail(name,age){
+		return `Hello ${name},your age is ${age} year old!`;
+	}
+	
+	export default function userProfile(){}
+
+	import {detail,userProfile} from './detailComponent'
+	
+	console.log(detail('Said',20));
+	console.log(userProfile);
+	
+/*-------------------------------Promises-------------------------------------*/
+
+	

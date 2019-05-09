@@ -1,0 +1,81 @@
+/*----------------------------Function Invocation---------------------*/
+  function add(a, b) {
+     console.log(this === window); // true
+     return a + b;
+  }
+
+  add(10,20);  //30
+
+  function add(a,b){
+    "use strict";
+    console.log(this === undefined);
+
+    function logResult(msg){
+      console.log(this === undefined);
+      console.log(msg);
+    }
+
+    var result = a + b;
+    logResult(result);
+    return result;
+  }
+
+  add(10,20); // true // true // 30
+
+  Note:- when 'use strict' is used 'this' is always equal to undefined
+
+/*--------------------------Method invocation----------------------------*/
+
+  var car = {
+    brand: 'Honda',
+    getBrand: function(){
+      return this.brand;
+    }
+  }
+
+  var hondaCar = car.getBrand.bind(car);
+  console.log(hondaCar()); // Honda
+
+/*--------------------------Constructor invocation---------------------*/
+
+  function Car(brand){
+    if(!new.target){
+      throw Error('Must use the new operator to call the function');
+    }
+    this.brand = brand;
+  }
+
+  Car.prototype.getBrand = function(){
+    return this.brand;
+  }
+
+  var car = new Car('Honda');
+  console.log(car.getBrand());
+
+/*--------------------------Indirect Invocation-----------------------*/
+
+  function getBrand(prefix){
+    console.log(prefix + this.brand);
+  }
+
+  var honda = {brand: 'Honda'};
+  var audi = {brand: 'Audi'};
+
+  getBrand.call(honda,"It's a "); // "It's a Honda"
+  getBrand.call(audi,"It's an ");// "It's an Audi"
+
+  getBrand.apply(honda,["It's a "]); // "It's a Honda"
+  getBrand.apply(audi,["It's an "]);// "It's an Audi"
+
+/*-------------------------Arrow Functions----------------------------*/
+
+  function Car(brand){
+    this.brand = brand;
+  }
+
+  Car.prototype.getBrand  = () => {
+    return this.brand;
+  }
+
+  var car = new Car('Honda');
+  console.log(car.getBrand());
