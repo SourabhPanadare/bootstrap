@@ -1,7 +1,8 @@
 # Reference
   http://www.javascripttutorial.net/
   http://es6-features.org/#Constants
-  
+  https://medium.freecodecamp.org/write-less-do-more-with-javascript-es6-5fd4a8e50ee2
+
 # Bootstrap Popular Libraries
   1. Bootstrap Select
   2. Bootstrap MultiSelect

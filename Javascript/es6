@@ -158,5 +158,108 @@
 	console.log(userProfile);
 	
 /*-------------------------------Promises-------------------------------------*/
-
+	var p = new Promise(function(resolve, reject) {  
+	   if (/* condition */) {
+		  resolve(/* value */);  // fulfilled successfully
+	   }
+	   else {
+		  reject(/* reason */);  // error, rejected
+	   }
+	});
 	
+					OR
+				
+	var p = new Promise((resolve, reject) => 
+	   if (/* condition */) {
+		  resolve(/* value */);  // fulfilled successfully
+	   }
+	   else {
+		  reject(/* reason */);  // error, rejected
+	   }
+	});
+	
+	Example:-
+	var p = new Promise(function(resolve,reject){
+		var num = 24;
+		if(num > 20){
+			resolve('success');
+		}else{
+			reject('error');
+		}
+	});
+	
+	p.then(function(val){ 
+		console.log(val);
+	}),
+	p.catch(function(error){
+		console.log(error);
+	});
+	
+					OR
+	
+	var p = new Promise((resolve, reject) => 
+		var num = 24;
+		if(num > 20){
+			resolve('success');
+		}else{
+			reject('error');
+		}
+	);
+	
+	p.then((val) => 
+			console.log(val)
+	),((err) => 
+            console.log(err)
+    );
+	
+	/*----------------------------Promise All-------------------------*/
+
+	var itemUrls = {  
+		'http://www.api.com/items/1234',
+		'http://www.api.com/items/4567'
+	},
+	itemPromises = itemUrls.map(fetchJSON);
+
+	Promise.all(itemPromises).then(function(results) {
+		 results.forEach(function(item) {
+		  
+		 });
+	})
+	.catch(function(err) {
+		console.log("Failed:", err);
+	});
+	
+/*-----------------------------Classes----------------------------------------*/
+
+	class myClass{
+		constructor(name,age){
+			this.name=name;
+			this.age=age;
+		}
+	}
+	
+	const user = new myClass("sid",20);
+	console.log(user.name)	//sid
+	
+	/*-----------------------------Class Inherit---------------------*/
+	
+	class myClass{
+		constructor(name,age){
+			this.name = name;
+			this.age = age;
+		}
+		
+		sayHello(){
+			console.log(`Hi ${this.name} your age is ${this.age}`);
+		}
+	}
+	
+	class UserProfile extends myClass{
+		username(){
+			console.log(this.name);
+		}
+	}
+	
+	const profile = new UserProfile('sid',22);
+	profile.sayHello()	//Hi Sid your age is 22;
+	profile.username()	//Sid
