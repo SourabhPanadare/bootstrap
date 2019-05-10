@@ -1,0 +1,73 @@
+a. .ajax():- Perform an asynchronous HTTP (Ajax) request.
+
+  $.ajax({
+    method: "POST",
+    url: "some.php",
+    data: { name: "John", location: "Boston" }
+  })
+  .done(function( msg ) {
+    alert( "Data Saved: " + msg );
+  })
+  .fail(function() {
+    alert( "error" );
+  })
+  .always(function() {
+    alert( "complete" );
+  });
+
+b. .ajaxSuccess():- Attach a function to be executed whenever an Ajax request completes successfully.
+
+  $( document ).ajaxSuccess(function( event, request, settings ) {
+    $( "#msg" ).append( "<li>Successful Request!</li>" );
+  });
+
+c. .ajaxError():- Register a handler to be called when Ajax requests complete with an error.
+
+  $( document ).ajaxError(function( event, request, settings ) {
+    $( "#msg" ).append( "<li>Error requesting page " + settings.url + "</li>" );
+  });
+
+d. .ajaxComplete():- Whenever an Ajax request completes, jQuery triggers the ajaxComplete event.
+
+  $( document ).ajaxComplete(function( event, request, settings ) {
+    $( "#msg" ).append( "<li>Request Complete.</li>" );
+  });
+
+e. .get():-  Load data from the server using a HTTP GET request.
+
+  $.get( "test.php", { name: "John", time: "2pm" } );
+  .done(function( data ) {
+      alert( "Data Loaded: " + data );
+  })
+  .fail(function() {
+    alert( "error" );
+  })
+  .always(function() {
+    alert( "finished" );
+  });
+
+f. .post():- Load data from the server using a HTTP POST request.
+
+  $.post( "test.php", { name: "John", time: "2pm" })
+  .done(function( data ) {
+    alert( "Data Loaded: " + data );
+  })
+  .fail(function() {
+    alert( "error" );
+  })
+  .always(function() {
+    alert( "finished" );
+  });
+
+g. .getJSON():- Load JSON-encoded data from the server using a GET HTTP request.
+
+  $.getJSON( "test.js", { name: "John", time: "2pm" } )
+  .done(function( json ) {
+    console.log( "JSON Data: " + json.users[ 3 ].name );
+  })
+  .fail(function( jqxhr, textStatus, error ) {
+    var err = textStatus + ", " + error;
+    console.log( "Request Failed: " + err );
+  });
+
+h. 

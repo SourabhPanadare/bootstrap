@@ -1,8 +1,11 @@
+## Reference
+  https://api.jquery.com
+
 # Git Commands
 
   git config --global user.name "Sam Smith"
   git config --global user.email sam@example.com
-  
+
   git init
   git clone /path/to/repository(on github)
   git remote add origin <server>
@@ -14,7 +17,7 @@
   git checkout -b <branchname>
   git checkout <branchname>
 
-  git branch -d <branchname>(Delete the feature branch) 
+  git branch -d <branchname>(Delete the feature branch)
 
   git add *
   git add <filename>
@@ -78,7 +81,7 @@
       </form>
     </body>
 
-  ## <fieldset> Used to group logically related controls and labels within a web form. 
+  ## <fieldset> Used to group logically related controls and labels within a web form.
 
      <form action="" method="post">
         <fieldset>                            /*---------Creates rectangular box around the form-------*/
@@ -99,8 +102,8 @@
       <dl>
           <dt>term1</dt>                             term1
             <dd>– definition1</dd>                      – definition1
-            <dd>– definition2</dd>                      – definition2 
-                                          => 
+            <dd>– definition2</dd>                      – definition2
+                                          =>
           <dt>term2</dt>                             term2              
             <dd>– definition1</dd>                      – definition1
             <dd>– definition2</dd>                      – definition2
@@ -113,6 +116,3 @@
   ##  overflow: auto; Works Similar to display table(i.e automatically adjust its height according to inner div)
 
   ##  overflow: visible; Display contents eventough it exceeds outer container size
-
-  
-
