@@ -1,0 +1,73 @@
+a. $ or jQuery():-
+
+   $( selector [, context ] ):- Accepts a string containing a CSS selector which is then used to match a set of elements.
+
+     $( "div.foo" );
+     $( "span", this ).addClass( "bar" );
+     $( this ).slideUp();
+
+   $( html [, ownerDocument ] ):- Creates DOM elements on the fly from the provided string of raw HTML.
+
+     $( "<div><p>Hello</p></div>" ).appendTo( "body" );
+
+     $( "<div><div/>", {
+        "class": "test",
+        text: "Click me!",
+        click: function() {
+          $( this ).toggleClass( "test" );
+        }
+      }).appendTo( "body" );
+
+   $( callback ):- Binds a function to be executed when the DOM has finished loading.
+
+    $(function() {
+
+    });
+    jQuery(function( $ ) {
+
+    });
+
+b. $.noConflict():- Relinquish jQuery's control of the $ variable.(handle jquery variable when used in other instance)
+
+      $.noConflict();
+      jQuery( document ).ready(function( $ ) {
+        // Code that uses jQuery's $ can follow here.
+      });
+
+c. $.holdReady( hold ):- Holds or releases the execution of jQuery's ready event.
+
+      $.holdReady( true );
+      $.getScript( "myplugin.js", function() {
+        $.holdReady( false );
+      });
+
+d. $.when( deferreds ):- Provides a way to execute callback functions based on zero or more Thenable objects
+
+      $.when( { testing: 123 } )
+      .done(function( x ) {
+          alert( x.testing ); // Alerts "123"
+      });
+
+      var d1 = $.Deferred();
+      var d2 = $.Deferred();
+
+      $.when( d1, d2 ).done(function ( v1, v2 ) {
+          console.log( v1 ); // "Fish"
+          console.log( v2 ); // "Pizza"
+      });
+
+      d1.resolve( "Fish" );
+      d2.resolve( "Pizza" );
+
+e. $.ready:-  A Promise-like object that resolves when the document is ready.
+
+      $.when( $.ready ).then(function() {
+
+      });
+
+      $.when(
+        $.getJSON( "ajax/test.json" ),
+        $.ready
+      ).done(function( data ) {
+        // Document is ready.
+      });

@@ -1,0 +1,70 @@
+a. .html():- Get the HTML contents of the first element in the set of matched elements.
+      var value = $( "div.demo-container" ).html();
+
+   .html( htmlString ):- Set the HTML contents of each element in the set of matched elements.
+      $( "div" ).html( "<span class='red'>Hello <b>Again</b></span>" );
+
+b. .val():- Get the current value of the first element in the set of matched elements.
+      $( "select#foo option:checked" ).val();                  // Get the value from the selected option in a dropdown
+      $( "select#foo" ).val();                                 // Get the value from a dropdown select directly
+      $( "input[type=checkbox][name=bar]:checked" ).val();     // Get the value from a checked checkbox
+      $( "input[type=radio][name=baz]:checked" ).val();        // Get the value from a set of radio buttons
+
+      var singleValues = $( "#single" ).val();
+      var multipleValues = $( "#multiple" ).val() || [];
+
+   .val(value):- Set the value of each element in the set of matched elements.
+      $( "#single" ).val( "Single2" );
+      $( "input").val([ "check1", "check2", "radio1" ]);
+
+c. .attr( attributeName ):- Get the value of an attribute for the first element in the set of matched elements.
+      var title = $( "em" ).attr( "title" );
+      $( "div" ).text( title );
+
+   .attr( attributeName, value ):- Set one or more attributes for the set of matched elements.
+      <img id="greatphoto" src="brush-seller.jpg" alt="brush seller">
+      $( "#greatphoto" ).attr("alt", "Beijing Brush Seller");
+      $( "#greatphoto" ).attr("title", "Photo by Kelly Clark");
+                                OR
+      $( "#greatphoto" ).attr({
+        alt: "Beijing Brush Seller",
+        title: "photo by Kelly Clark"
+      });
+
+d. .prop( propertyName ):- Get the value of a property for the first element in the set of matched elements.
+      $( elem ).prop( "checked" );
+      $( "input" ).prop( "disabled", false );
+
+   .prop( propertyName, value ):- Set one or more properties for the set of matched elements.
+      $( "input" ).prop( "checked", true );
+
+e. .removeAttr( attributeName ):- Remove an attribute from each element in the set of matched elements.
+
+    $('input').removeAttr( "title" );
+
+f. .removeProp( propertyName ):- Remove a property for the set of matched elements.
+
+    $("button").click(function(){
+      var $div = $("div");
+      $div.prop("color", "FF0000");
+      $div.append("The color property: " + $div.prop("color"));
+      $div.removeProp("color");
+    });
+
+g. .addClass( className ):- Adds the specified class(es) to each element in the set of matched elements.
+
+    $( "p" ).addClass( "myClass yourClass" );
+
+h. .removeClass( [className ] ):- Remove a single class, multiple classes, or all classes from each element in the set of matched elements.
+
+    $( "p" ).removeClass( "myClass yourClass" );
+
+i. .toggleClass( className ):- Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the state argument.
+
+    $( "#foo" ).toggleClass( className, addOrRemove );
+    $( "#foo" ).toggleClass( "highlight" );
+
+j. .hasClass( className ):- Determine whether any of the matched elements are assigned the given class.
+
+    $( "p" ).hasClass( "selected" );
+    $( "#mydiv" ).hasClass( "foo" );
