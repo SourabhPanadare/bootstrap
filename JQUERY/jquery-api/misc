@@ -1,0 +1,93 @@
+a. $.noConflict():- Relinquish jQuery's control of the $ variable.(We can use $ instead of jQuery)
+
+  $.noConflict();
+  jQuery( document ).ready(function( $ ) {
+  // Code that uses jQuery's $ can follow here.
+  });
+  // Code that uses other library's $ can follow here.
+
+b. .data( key, value ):- Store arbitrary data associated with the matched elements.
+
+  $( "div" ).data( "test", { first: 16, last: "pizza!" } );
+  $( "div" ).data( "test" ).first                               //16
+  $( "div" ).data( "test" ).last                                //pizza!
+
+c. .each( function ):-  Iterate over a jQuery object, executing a function for each matched element.
+
+  <ul>
+    <li>foo</li>
+    <li>bar</li>
+  </ul>
+
+  $( "li" ).each(function( index ) {
+    console.log( index + ": " + $( this ).text() );
+  });
+
+  0: foo
+  1: bar
+
+d. .get( index ):-  Retrieve one of the elements matched by the jQuery object.
+
+  <ul>
+    <li id="foo">foo</li>
+    <li id="bar">bar</li>
+  </ul>
+
+  console.log( $( "li" ).get( 0 ) );  //<li id="foo">
+
+  .get():-  Retrieve the elements matched by the jQuery object.
+
+  <ul>
+    <li id="foo">foo</li>
+    <li id="bar">bar</li>
+  </ul>
+
+  console.log( $( "li" ).get() );
+
+  [<li id="foo">, <li id="bar">]
+
+e. .index():- Search for a given element from among the matched elements.
+
+  <ul>
+    <li id="foo">foo</li>
+    <li id="bar">bar</li>
+    <li id="baz">baz</li>
+  </ul>
+
+  var listItem = $( "#bar" );
+  console.log( "Index: " + $( "li" ).index( listItem ) );   //Index: 1
+
+f. .removeData( [name ] ):- Remove a previously-stored piece of data.
+
+  <div></div>
+  $("div").data("greeting", "Hello World");
+  console.log($("div").data("greeting"));               // Hello World
+
+  $("div").removeData("greeting");
+  console.log($("div").data("greeting"));              // Undefined
+
+g. .size():-  Return the number of elements in the jQuery object.
+
+  <ul>
+    <li>foo</li>
+    <li>bar</li>
+  </ul>
+  console.log( "Size: " + $( "li" ).size());         //Size: 2
+  console.log( "Size: " + $( "li" ).length );       //Size: 2
+
+h. .toArray():- Retrieve all the elements contained in the jQuery set, as an array.
+
+  <ul>
+    <li>Milk</li>
+    <li>Coffee</li>
+    <li>Soda</li>
+  </ul>
+
+  var x = $("li").toArray()
+  for (i = 0; i< x.length; i++) {
+    console.log(x[i].innerHTML);
+  }
+
+  O/P:- Milk
+        Coffee
+        Soda

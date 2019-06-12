@@ -1,0 +1,12 @@
+a. .css( propertyName ):- Get the computed style properties for the first element in the set of matched elements.
+
+   var color = $( this ).css( "background-color" );
+   var styleProps = $( this ).css([
+    "width", "height", "color", "background-color"
+   ]);
+
+   .css( propertyName, value ):- Set one or more CSS properties for the set of matched elements.
+
+   $( this ).css( "color", "red" );
+   $( this ).css( "width", "200" );
+   $( this ).css({backgroundColor : "#ddd",fontWeight: "500"});

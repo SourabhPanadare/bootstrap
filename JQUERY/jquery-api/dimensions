@@ -1,0 +1,59 @@
+a. .height():- Get the current computed height for the first element in the set of matched elements.
+
+    // Returns height of browser viewport
+    $( window ).height();
+
+    // Returns height of HTML document
+    $( document ).height();
+
+    .height( value ):- Set the CSS height of every matched element.
+
+    $( this ).height( 30 );
+
+    .innerHeight():- Get the current computed height for the first element in the set of matched elements, including padding but not border.
+
+    var p = $( "p:first" );
+    p.innerHeight();
+
+    .innerHeight( value ):- Set the CSS inner height of each element in the set of matched elements.
+
+    $( this ).innerHeight( 50 );
+
+    .outerHeight( [includeMargin ] ):- Get the current computed outer height (including padding, border, and optionally margin) for the first element in the set of matched elements.
+
+    var p = $( "p:first" );
+    p.outerHeight( true );
+
+    .outerHeight( value ):- Set the CSS outer height of each element in the set of matched elements.
+
+    $( this ).outerHeight( 50 );
+
+b. .width():- Get the current computed width for the first element in the set of matched elements.
+
+    // Returns width of browser viewport
+    $( window ).width();
+
+    // Returns width of HTML document
+    $( document ).width();
+
+    .width( value ):- Set the CSS width of each element in the set of matched elements.
+
+    $( this ).width( 50 );
+
+    .innerWidth():- Get the current computed width for the first element in the set of matched elements, including padding but not border.
+
+    var p = $( "p:first" );
+    p.innerWidth();
+
+    .innerWidth( value ):- Set the CSS inner width of each element in the set of matched elements.
+
+    $( this ).innerWidth( 50 );
+
+    .outerWidth( [includeMargin ] ):- Get the current computed outer width (including padding, border, and optionally margin) for the first element in the set of matched elements.
+
+    var p = $( "p:first" );
+    p.outerWidth( true );
+
+    .outerWidth( value ):- Set the CSS outer width of each element in the set of matched elements.
+
+    $( this ).outerWidth( 50 );

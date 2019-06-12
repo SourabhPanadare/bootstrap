@@ -1,0 +1,83 @@
+a. .animate( properties [, duration ] [, easing ] [, complete ] ):- Perform a custom animation of a set of CSS properties.
+
+    $( "#book" ).animate({
+     opacity: 0.25,
+     left: "+=50",
+     height: "toggle"
+    }, 5000, function() {
+      // Animation complete.
+    });
+
+b. .delay( duration [, queueName ] ):- Set a timer to delay execution of subsequent items in the queue.
+
+    $( "div.first" ).slideUp( 300 ).delay( 800 ).fadeIn( 400 );
+
+c. .hide():- Hide the matched elements.
+
+    $( ".target" ).hide();
+    $( "#book" ).hide( "slow", function() {
+      alert( "Animation complete." );
+    });
+
+d. .show():- Display the matched elements.
+
+    $( ".target" ).show();
+    $( "#book" ).show( "slow", function() {
+      // Animation complete.
+    });
+
+e. .stop( [clearQueue ] [, jumpToEnd ] ):- Stop the currently-running animation on the matched elements.
+
+    $( "#hoverme-stop-2" ).hover(function() {
+      $( this ).find( "img" ).stop( true, true ).fadeOut();
+    }, function() {
+      $( this ).find( "img" ).stop( true, true ).fadeIn();
+    });
+
+f. .toggle( [duration ] [, complete ] ):- Display or hide the matched elements.
+
+    $( "#book" ).toggle( "slow", function() {
+        // Animation complete.
+    });
+
+g. .slideUp( [duration ] [, complete ] ):- Hide the matched elements with a sliding motion.
+
+    $( "#book" ).slideUp( "slow", function() {
+        // Animation complete.
+    });
+
+h. .slideDown( [duration ] [, complete ] ):- Display the matched elements with a sliding motion.
+
+    $( "#book" ).slideDown( "slow", function() {
+        // Animation complete.
+    });
+
+i. .slideToggle( [duration ] [, complete ] ):- Display or hide the matched elements with a sliding motion.
+
+    $( "#book" ).slideToggle( "slow", function() {
+      // Animation complete.
+    });
+
+j. .fadeIn( [duration ] [, complete ] ):- Display the matched elements by fading them to opaque.
+
+    $( "#book" ).fadeIn( "slow", function() {
+      // Animation complete
+    });
+
+h. .fadeOut( [duration ] [, complete ] ):- Hide the matched elements by fading them to transparent.
+
+    $( "#book" ).fadeOut( "slow", function() {
+      // Animation complete.
+    });
+
+i. .fadeTo( duration, opacity [, complete ] ):- Adjust the opacity of the matched elements.
+
+    $( "#book" ).fadeTo( "slow" , 0.5, function() {
+      // Animation complete.
+    });
+
+j. .fadeToggle( [duration ] [, easing ] [, complete ] ):- Display or hide the matched elements by animating their opacity.
+
+    $( "p:first" ).fadeToggle( "slow", "linear" );
+
+h. 

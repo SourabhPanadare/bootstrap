@@ -1,0 +1,135 @@
+a. $.each( array, callback ):- A generic iterator function, which can be used to seamlessly iterate over both objects and arrays.
+
+  $.each([ 52, 97 ], function( index, value ) {
+    alert( index + ": " + value );
+  });
+
+  0: 52
+  1: 97
+
+  var obj = {
+    "flammable": "inflammable",
+    "duh": "no duh"
+  };
+  $.each( obj, function( key, value ) {
+    alert( key + ": " + value );
+  });
+
+  flammable: inflammable
+  duh: no duh
+
+b. $.extend( target [, object1 ] [, objectN ] ):- Merge the contents of two or more objects together into the first object.
+
+  <div id="log"></div>
+  var object1 = {
+    apple: 0,
+    banana: { weight: 52, price: 100 },
+    cherry: 97
+  };
+  var object2 = {
+    banana: { price: 200 },
+    durian: 100
+  };
+
+  // Merge object2 into object1
+  $.extend( object1, object2 );
+  // Assuming JSON.stringify - not available in IE<8
+  $( "#log" ).append( JSON.stringify( object1 ) );        //{"apple":0,"banana":{"price":200},"cherry":97,"durian":100}
+
+  // Merge object2 into object1, recursively
+  $.extend( true, object1, object2 );
+
+  // Assuming JSON.stringify - not available in IE<8
+  $( "#log" ).append( JSON.stringify( object1 ) );        //{"apple":0,"banana":{"weight":52,"price":200},"cherry":97,"durian":100}
+
+c. $.grep( array, function [, invert ] ):- Finds the elements of an array which satisfy a filter function. The original array is not affected.
+
+  Note:- Used For Filter Purpose
+
+  Filter an array of numbers to include only numbers bigger then zero.
+  $.grep( [ 0, 1, 2 ], function( n, i ) {
+    return n > 0;
+  });
+
+  O/p:- [ 1, 2 ]
+
+  Filter an array of numbers to include numbers that are not bigger than zero.
+  $.grep( [ 0, 1, 2 ], function( n, i ) {
+      return n > 0;
+  }, true );
+
+  O/p:- [ 0 ]
+
+d. $.inArray( value, array [, fromIndex ] ):- Search for a specified value within an array and return its index (or -1 if not found).
+
+  var names = ['vadim', 'thomas', 'tanya', 'timur', 'eve', 'kate', 'karen', 'peter'];
+  $.inArray( "tanya", names )   //2
+  $.inArray( "sourabh",names )  //-1
+
+e. $.isArray( obj ):- Determine whether the argument is an array.
+
+  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+  $.isArray(fruits)             //true
+
+f. $.isEmptyObject( object ):- Check to see if an object is empty (contains no enumerable properties).
+
+  $.isEmptyObject({}); // true
+  $.isEmptyObject({ foo: "bar" }); // false
+
+g. $.isFunction( value ):- Determines if its argument is callable as a function.
+
+   $.isFunction(function() {});   //true
+
+h. $.isNumeric( value ):- Determines whether its argument represents a JavaScript number.
+
+  // true (numeric)
+  $.isNumeric( "-10" )
+  $.isNumeric( 0xFF )
+  $.isNumeric( "0xFF" )
+  $.isNumeric( +10 )
+  $.isNumeric( 0144 )
+
+i. $.makeArray( obj ):- Convert an array-like object into a true JavaScript array.
+
+  var obj = $( "li" );
+  var arr = $.makeArray( obj );
+
+j. $.map( array, callback ):- Translate all items in an array or object to new array of items.
+
+  $.map( [ 0, 1, 2 ], function( n ) {
+    return n + 4;
+  });
+
+  O/P:- [4, 5, 6]
+
+  var dimensions = { width: 10, height: 15, length: 20 };
+
+  var value  = $.map( dimensions, function( value, index ) {
+    return value * 2;
+  });
+
+  O/P:- [10,15,20]
+
+  var keys = $.map( dimensions, function( value, key ) {
+    return key;
+  });
+
+  O/P:- [ "width", "height", "length" ]
+
+k. $.merge( first, second ):- Merge the contents of two arrays together into the first array.
+
+  $.merge( [ 0, 1, 2 ], [ 2, 3, 4 ] )
+  O/P:- [ 0, 1, 2, 2, 3, 4 ]
+
+l. $.now():- Return a number representing the current time.((new Date).getTime())
+   O/P:- 1560333121838
+
+m. $.trim( str ):- Remove the whitespace from the beginning and end of a string.
+
+    $.trim("    hello, how are you?    ");
+    O/P:- "hello, how are you?"
+
+n. $.parseJSON( json ):- Takes a well-formed JSON string and returns the resulting JavaScript value.
+
+  var obj = jQuery.parseJSON( '{ "name": "John" }' );
+  console.log(obj.name);                                      //John

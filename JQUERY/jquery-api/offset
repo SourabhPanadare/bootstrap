@@ -1,0 +1,32 @@
+a. .offset():- Get the current coordinates of the first element in the set of matched elements, relative to the document.
+
+    var p = $( "p:last" );
+    var offset = p.offset();
+    p.html( "left: " + offset.left + ", top: " + offset.top );
+
+    .offset( coordinates ):- Set the current coordinates of every element in the set of matched elements, relative to the document.
+
+    $( "p:last" ).offset({ top: 10, left: 30 });
+
+b. .position():- Get the current coordinates of the first element in the set of matched elements, relative to the offset parent.
+
+    var p = $( "p:first" );
+    var position = p.position();
+    $( "p:last" ).text( "left: " + position.left + ", top: " + position.top );
+
+c. .scrollLeft():- Get the current horizontal position of the scroll bar for the first element in the set of matched elements.
+
+    var p = $( "p:first" );
+    $( "p:last" ).text( "scrollLeft:" + p.scrollLeft() );
+
+    .scrollLeft( value ):- Set the current horizontal position of the scroll bar for each of the set of matched elements.
+    $( "div.demo" ).scrollLeft( 300 );
+
+d. .scrollTop():- Get the current vertical position of the scroll bar for the first element in the set of matched elements or set the vertical position of the scroll bar for every matched element.
+
+    var p = $( "p:first" );
+    $( "p:last" ).text( "scrollTop:" + p.scrollTop() );
+
+    .scrollTop( value ):- Set the current vertical position of the scroll bar for each of the set of matched elements.
+
+    $( "div.demo" ).scrollTop( 300 );
