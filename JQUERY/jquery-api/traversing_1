@@ -1,0 +1,150 @@
+a. .add( selector ):- Create a new jQuery object with elements added to the set of matched elements
+
+  <ul>
+    <li>list item 1</li>
+    <li>list item 2</li>
+    <li>list item 3</li>
+  </ul>
+  <p>a paragraph</p>
+
+  $( "li" ).add( "p" ).css( "background-color", "red" );
+
+b. .children( [selector ] ):- Get the children of each element in the set of matched elements, optionally filtered by a selector.
+
+    <div>div (grandparent)
+       <ul>ul (direct parent)
+         <li>li (child)
+           <span>span (grandchild)</span>
+         </li>
+       </ul>
+     </div>
+     $("ul").children().css({"color": "red", "border": "2px solid red"});
+
+     O/P:- All li element are bordered with red color. as li is the child element of ul
+
+c. .closest( selector ):-  For each element in the set, get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree.
+
+    <div style="width:500px;">div (great-grandparent)
+      <ul>ul (second ancestor - second grandparent)
+        <ul>ul (first ancestor - first grandparent)
+          <li>li (direct parent)
+            <span>span</span>
+          </li>
+        </ul>
+      </ul>
+    </div>
+    $("span").closest("ul").css({"color": "red", "border": "2px solid red"});
+
+    O/P:- ul element is bordered with red color.
+
+d. .contents():- Get the children of each element in the set of matched elements, including text and comment nodes.
+
+    <div><em>Hello world! What a beautiful day!</em></div>
+    $("div").contents().filter("em").wrap("<b/>");
+
+    O/p:- <div><em><b>Hello world! What a beautiful day!</b></em></div>
+
+e. .each( function ):- Iterate over a jQuery object, executing a function for each matched element.
+
+    <ul>
+      <li>foo</li>
+      <li>bar</li>
+    </ul>
+
+    $( "li" ).each(function( index ) {
+      console.log( index + ": " + $( this ).text() );
+    });
+
+    O/p:- 0: foo
+          1: bar
+
+f. .end():- End the most recent filtering operation in the current chain and return the set of matched elements to its previous state.
+
+    <ul class="first">
+      <li class="foo">list item 1</li>
+      <li>list item 2</li>
+      <li class="bar">list item 3</li>
+    </ul>
+
+    $( "ul.first" )
+      .find( ".foo" )
+      .css( "background-color", "red" )
+      .end()
+      .find( ".bar" )
+      .css( "background-color", "green" );
+
+    O/p:- <li class="foo">list item 1</li>:- background is red
+          <li class="bar">list item 3</li>:- background is green
+
+g. .eq():-  Reduce the set of matched elements to the one at the specified index.
+
+    <ul>
+      <li>list item 1</li>
+      <li>list item 2</li>
+      <li>list item 3</li>
+      <li>list item 4</li>
+      <li>list item 5</li>
+    </ul>
+
+    $( "li" ).eq( 2 ).css( "background-color", "red" );   // item 3 from top is backgrounded in red
+    $( "li" ).eq( -2 ).css( "background-color", "red" );  // item 4 is backgrounded red
+
+h. .filter( selector ):-  Reduce the set of matched elements to those that match the selector or pass the function's test.
+
+    <ul>
+      <li>list item 1</li>
+      <li>list item 2</li>
+      <li>list item 3</li>
+      <li>list item 4</li>
+    </ul>
+
+    $( "li" ).filter( ":even" ).css( "background-color", "red" ); //item 2 and item 4 have background red.
+
+i. .find( selector ):- Get the descendants of each element in the current set of matched elements, filtered by a selector, jQuery object, or element.
+
+    <p><span>Hello</span>, how are you?</p>
+    <p>Me? I'm <span>good</span>.</p>
+
+    $( "p" ).find( "span" ).css( "color", "red" );
+    O/p:- Hello and good are colored red.
+
+j. .has( selector ):-  Reduce the set of matched elements to those that have a descendant that matches the selector or DOM element.
+
+    <ul>
+      <li>list item 1</li>
+      <li>list item 2
+      <ul>
+        <li>list item 2-a</li>
+        <li>list item 2-b</li>
+      </ul>
+      </li>
+      <li>list item 3</li>
+    </ul>
+
+    $( "li" ).has( "ul" ).css( "background-color", "red" );
+
+    O/p:- item2 is colored in red background as it only has ul among its descendants.
+
+k. .is( selector ):- Check the current matched set of elements against a selector, element, or jQuery object and return true if at least one of these elements matches the given arguments.
+
+    <div>
+      <p>Click me to find out if I my parent is a div element.</p>
+    </div>
+
+    if ($("p").parent().is("div")) {
+      alert("Parent of p is div");
+    }
+
+l. .first():- Reduce the set of matched elements to the first in the set.
+   .last():- Reduce the set of matched elements to the final one in the set.
+
+    <ul>
+      <li>list item 1</li>
+      <li>list item 2</li>
+      <li>list item 3</li>
+      <li>list item 4</li>
+      <li>list item 5</li>
+    </ul>
+
+    $( "li" ).first().css( "background-color", "red" );     //item 1 will have red background
+    $( "li" ).last().css( "background-color", "red" );      //item 5 will have red background
