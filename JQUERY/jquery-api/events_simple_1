@@ -76,4 +76,72 @@ i. .error( handler ):- Bind an event handler to the "error" JavaScript event.
     })
     .attr( "src", "missing.png" );
 
-j. .focus( handler ):- 
+j. .focus( handler ):- Bind an event handler to the "focus" JavaScript event, or trigger that event on an element.
+
+    $( "#target" ).focus();
+    $( "#target" ).focus(function() {
+      alert( "Handler for .focus() called." );
+    });
+
+k. .hover( handlerIn, handlerOut ):- Bind two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the elements.
+
+    <p>Hover the mouse pointer over this paragraph.</p>
+    $("p").hover(function(){
+      $(this).css("background-color", "yellow");
+      }, function(){
+      $(this).css("background-color", "pink");
+    });
+
+l. .live( events, handler ):- Attach an event handler for all elements which match the current selector, now and in the future.
+
+    $( "a" ).live( "click", function() {
+      return false;
+    });
+
+    $( "p" ).live({
+      click: function() {
+        $( this ).after( "<p>Another paragraph!</p>" );
+      },
+      mouseover: function() {
+        $( this ).addClass( "over" );
+      },
+      mouseout: function() {
+        $( this ).removeClass( "over" );
+      }
+    });
+
+m. .load( handler ):- Bind an event handler to the "load" JavaScript event.
+
+    $( window ).load(function() {
+      // Run code
+    });
+
+    $( "#book" ).load(function() {
+      // Handler for .load() called.
+    });
+
+n. .one( events [, data ], handler ):-  Attach a handler to an event for the elements. The handler is executed at most once per element per event type.
+
+    $( "#foo" ).one( "click mouseover", function( event ) {
+        alert( "The " + event.type + " event happened!" );
+    });
+
+    $( "#foo" ).on( "click", function( event ) {
+      alert( "This will be displayed only once." );
+      $( this ).off( event );
+    });
+
+o. .on( events [, selector ] [, data ], handler ):- Attach an event handler function for one or more events to the selected elements.
+
+    $( "#dataTable tbody" ).on( "click", "tr", function() {
+      console.log( $( this ).text() );
+    });
+
+    $( "#dataTable tbody tr" ).on( "click", function() {
+      console.log( $( this ).text() );
+    });
+
+p. .off( events [, selector ] [, handler ] ):-  Remove an event handler.
+
+    $( "p" ).off();
+    $( "p" ).off( "click", "**" );

@@ -1,0 +1,97 @@
+a. .ready( handler ):- Specify a function to execute when the DOM is fully loaded.
+
+    $( document ).ready(function() {
+      // Handler for .ready() called.
+    });
+
+    $(function() {
+      // Handler for .ready() called.
+    });
+
+    jq = jQuery.noConflict();
+    jq(function( $ ) {
+      // Code using $ as usual goes here; the actual jQuery object is jq
+    });
+
+b. .resize( handler ):-  Bind an event handler to the "resize" JavaScript event, or trigger that event on an element.
+
+    $( window ).resize(function() {
+      //Your Code Here
+    });
+
+c. .scroll( handler ):- Bind an event handler to the "scroll" JavaScript event, or trigger that event on an element.
+
+    $( "#target" ).scroll();
+    $( "#target" ).scroll(function() {
+
+    });
+
+d. .select( handler ):- Bind an event handler to the "select" JavaScript event, or trigger that event on an element.
+
+    $( "#target" ).select();
+    $( "#target" ).select(function() {
+      alert( "Handler for .select() called." );
+    });
+
+e. .submit( handler ):- Bind an event handler to the "submit" JavaScript event, or trigger that event on an element.
+
+    $( "#target" ).submit();
+    $( "#target" ).submit(function( event ) {
+      event.preventDefault();
+    });
+
+f. .toggle( handler, handler [, handler ] ):- Bind two or more handlers to the matched elements, to be executed on alternate clicks.
+
+    $( "#target" ).toggle(function() {
+      alert( "First handler for .toggle() called." );
+    }, function() {
+      alert( "Second handler for .toggle() called." );
+    });
+
+g. .trigger( eventType [, extraParameters ] ):-  Execute all handlers and behaviors attached to the matched elements for the given event type.
+
+    $( "#foo" ).on( "click", function() {
+
+    });
+
+    $( "#foo" ).trigger( "click" );
+
+h. .unbind( eventType [, handler ] ):- Remove a previously-attached event handler from the elements.
+
+    $( "#foo" ).unbind();
+    $( "#foo").unbind( "click" );
+
+i. .unload( handler ):- Bind an event handler to the "unload" JavaScript event.
+
+    $( window ).unload(function() {
+      return "Bye now!";
+    });
+
+j. .undelegate():-  Remove a handler from the event for all elements which match the current selector, based upon a specific set of root elements.
+
+    $( "p" ).undelegate();
+    $( "p" ).undelegate( "click" );
+
+k. .keypress( handler ):- Bind an event handler to the "keypress" JavaScript event, or trigger that event on an element.
+   .keyup( handler ):- Bind an event handler to the "keyup" JavaScript event, or trigger that event on an element
+   .keydown( handler ):- Bind an event handler to the "keydown" JavaScript event, or trigger that event on an element.
+
+   $( "#target" ).keypress(function() {});
+   $( "#target" ).keydown(function() {});
+   $( "#target" ).keyup(function() {});
+
+l. .mouseup( handler ):- Bind an event handler to the "mouseup" JavaScript event, or trigger that event on an element.
+   .mousedown( handler ):- Bind an event handler to the "mousedown" JavaScript event, or trigger that event on an element.
+   .mouseenter( handler ):- Bind an event handler to be fired when the mouse enters an element, or trigger that handler on an element.
+   .mouseleave( handler ):- Bind an event handler to be fired when the mouse leaves an element, or trigger that handler on an element.
+   .mousemove( handler ):- Bind an event handler to the "mousemove" JavaScript event, or trigger that event on an element.
+   .mouseout( handler ):- Bind an event handler to the "mouseout" JavaScript event, or trigger that event on an element.
+   .mouseover( handler ):- Bind an event handler to the "mouseover" JavaScript event, or trigger that event on an element.
+
+   $( "#outer" ).mouseup(function() {});
+   $( "#outer" ).mousedown(function() {});
+   $( "#outer" ).mouseenter(function() {});
+   $( "#outer" ).mouseleave(function() {});
+   $( "#outer" ).mousemove(function() {});
+   $( "#outer" ).mouseout(function() {});
+   $( "#outer" ).mouseover(function() {});
